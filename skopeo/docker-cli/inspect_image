@@ -1,0 +1,8 @@
+#! /bin/bash
+
+source .env
+
+echo $QUAY_PASSWORD | docker login -u $QUAY_USERNAME --password-stdin quay.io
+docker pull quay.io/app-sre/ubi8-ubi-minimal:latest
+docker inspect quay.io/app-sre/ubi8-ubi-minimal:latest
+docker rmi quay.io/app-sre/ubi8-ubi-minimal:latest
