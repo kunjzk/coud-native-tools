@@ -1,2 +1,5 @@
 skopeo/docker-cli/.env
 .aws-creds.json
+*.tfstate
+*.tfstate.backup
+.terraform/
