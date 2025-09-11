@@ -1,0 +1,29 @@
+groups:
+  - name: slo_alerts
+    rules:
+      - alert: HighErrorRate
+        expr: rate(prometheus_http_requests_total{code=~"5.."}[5m]) / rate(prometheus_http_requests_total[5m]) > 0.01
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "High error rate detected"
+          description: "Error rate is {{ $value | humanizePercentage }} for the last 5 minutes"
+
+      - alert: ErrorBudgetBurnRate
+        expr: rate(prometheus_http_requests_total{code=~"5.."}[1h]) / rate(prometheus_http_requests_total[1h]) > 0.005
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High error budget burn rate"
+          description: "Burning error budget at {{ $value | humanizePercentage }} rate"
+
+      - alert: SLOBreach
+        expr: rate(prometheus_http_requests_total{code=~"[2-3].."}[28d]) / rate(prometheus_http_requests_total[28d]) < 0.9995
+        for: 10m
+        labels:
+          severity: critical
+        annotations:
+          summary: "SLO breach warning - approaching 99.9% threshold"
+          description: "28-day uptime is {{ $value | humanizePercentage }}, approaching SLO breach"

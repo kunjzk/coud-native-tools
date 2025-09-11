@@ -1,0 +1,34 @@
+rule_files:
+  - alert_rules.yml
+
+evaluation_interval: 1m
+
+tests:
+  - interval: 1m
+    input_series:
+      - series: 'prometheus_http_requests_total{code="200", handler="/metrics", instance="localhost:9090", job="prometheus", method="get"}'
+        values: "0+10x10" # 0, 10, 20, 30, ... over 10 minutes
+      - series: 'prometheus_http_requests_total{code="500", handler="/metrics", instance="localhost:9090", job="prometheus", method="get"}'
+        values: "0+1x10" # 0, 1, 2, 3, ... over 10 minutes (simulating errors)
+
+    alert_rule_test:
+      - eval_time: 5m
+        alertname: HighErrorRate
+        exp_alerts:
+          - exp_labels:
+              severity: critical
+            exp_annotations:
+              summary: "High error rate detected"
+              description: "Error rate is 9.09% for the last 5 minutes"
+
+      - eval_time: 2m
+        alertname: HighErrorRate
+        exp_alerts: [] # Should not fire yet (need 2m duration)
+
+      - eval_time: 10m
+        alertname: ErrorBudgetBurnRate
+        exp_alerts:
+          - exp_labels:
+              severity: warning
+            exp_annotations:
+              summary: "High error budget burn rate"
