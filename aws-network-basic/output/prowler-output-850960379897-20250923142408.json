@@ -1,0 +1,136 @@
+[{
+    "AssessmentStartTime": "2025-09-23T14:24:08.222912",
+    "FindingUniqueId": "prowler-aws-ec2_ebs_default_encryption-850960379897-ap-southeast-1-850960379897",
+    "Provider": "aws",
+    "CheckID": "ec2_ebs_default_encryption",
+    "CheckTitle": "Check if EBS Default Encryption is activated.",
+    "CheckType": [
+        "Data Protection"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "ebs",
+    "Status": "FAIL",
+    "StatusExtended": "EBS Default Encryption is not activated.",
+    "Severity": "medium",
+    "ResourceType": "Other",
+    "ResourceDetails": "",
+    "Description": "Check if EBS Default Encryption is activated.",
+    "Risk": "If not enabled sensitive information at rest is not protected.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "https://docs.bridgecrew.io/docs/ensure-ebs-default-encryption-is-enabled#terraform",
+            "CLI": "aws ec2 enable-ebs-encryption-by-default",
+            "Other": "https://docs.bridgecrew.io/docs/ensure-ebs-default-encryption-is-enabled#aws-console"
+        },
+        "Recommendation": {
+            "Text": "Enable Encryption. Use a CMK where possible. It will provide additional management and privacy benefits.",
+            "Url": "https://aws.amazon.com/premiumsupport/knowledge-center/ebs-automatic-encryption/"
+        }
+    },
+    "Compliance": {
+        "CISA": [
+            "your-systems-3",
+            "your-data-1"
+        ],
+        "MITRE-ATTACK": [
+            "T1119"
+        ],
+        "AWS-Foundational-Security-Best-Practices": [
+            "ec2"
+        ],
+        "HIPAA": [
+            "164_308_a_1_ii_b",
+            "164_308_a_4_ii_a",
+            "164_312_a_2_iv",
+            "164_312_e_2_ii"
+        ],
+        "GxP-21-CFR-Part-11": [
+            "11.10-g",
+            "11.30"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC08-BP02"
+        ],
+        "GxP-EU-Annex-11": [
+            "7.1-data-storage-damage-protection"
+        ],
+        "NIST-800-53-Revision-4": [
+            "sc_28"
+        ],
+        "NIST-800-53-Revision-5": [
+            "au_9_3",
+            "cm_6_a",
+            "cm_9_b",
+            "cp_9_d",
+            "sc_8_3",
+            "sc_8_4",
+            "sc_13_a",
+            "sc_28_1",
+            "si_19_4"
+        ],
+        "AWS-Audit-Manager-Control-Tower-Guardrails": [
+            "1.0.3"
+        ],
+        "FFIEC": [
+            "d3-pc-am-b-12"
+        ]
+    },
+    "Categories": [
+        "encryption"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "850960379897",
+    "ResourceArn": "arn:aws:iam::850960379897:root",
+    "ResourceTags": {}
+},{
+    "AssessmentStartTime": "2025-09-23T14:24:08.222912",
+    "FindingUniqueId": "prowler-aws-vpc_different_regions-850960379897-ap-southeast-1-850960379897",
+    "Provider": "aws",
+    "CheckID": "vpc_different_regions",
+    "CheckTitle": "Ensure there are VPCs in more than one region",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "vpc",
+    "SubServiceName": "subnet",
+    "Status": "FAIL",
+    "StatusExtended": "VPCs found only in one region.",
+    "Severity": "medium",
+    "ResourceType": "AwsEc2Vpc",
+    "ResourceDetails": "",
+    "Description": "Ensure there are VPCs in more than one region",
+    "Risk": "",
+    "RelatedUrl": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Scenario2.html",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "aws ec2 create-vpc",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Ensure there are VPCs in more than one region",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-example-private-subnets-nat.html"
+        }
+    },
+    "Compliance": {},
+    "Categories": [],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "850960379897",
+    "ResourceArn": "arn:aws:iam::850960379897:root",
+    "ResourceTags": {}
+}]
