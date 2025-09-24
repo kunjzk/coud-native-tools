@@ -1,0 +1,4485 @@
+[{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_ebs_default_encryption-850960379897-ap-southeast-1-850960379897",
+    "Provider": "aws",
+    "CheckID": "ec2_ebs_default_encryption",
+    "CheckTitle": "Check if EBS Default Encryption is activated.",
+    "CheckType": [
+        "Data Protection"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "ebs",
+    "Status": "FAIL",
+    "StatusExtended": "EBS Default Encryption is not activated.",
+    "Severity": "medium",
+    "ResourceType": "Other",
+    "ResourceDetails": "",
+    "Description": "Check if EBS Default Encryption is activated.",
+    "Risk": "If not enabled sensitive information at rest is not protected.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "https://docs.bridgecrew.io/docs/ensure-ebs-default-encryption-is-enabled#terraform",
+            "CLI": "aws ec2 enable-ebs-encryption-by-default",
+            "Other": "https://docs.bridgecrew.io/docs/ensure-ebs-default-encryption-is-enabled#aws-console"
+        },
+        "Recommendation": {
+            "Text": "Enable Encryption. Use a CMK where possible. It will provide additional management and privacy benefits.",
+            "Url": "https://aws.amazon.com/premiumsupport/knowledge-center/ebs-automatic-encryption/"
+        }
+    },
+    "Compliance": {
+        "CISA": [
+            "your-systems-3",
+            "your-data-1"
+        ],
+        "MITRE-ATTACK": [
+            "T1119"
+        ],
+        "AWS-Foundational-Security-Best-Practices": [
+            "ec2"
+        ],
+        "HIPAA": [
+            "164_308_a_1_ii_b",
+            "164_308_a_4_ii_a",
+            "164_312_a_2_iv",
+            "164_312_e_2_ii"
+        ],
+        "GxP-21-CFR-Part-11": [
+            "11.10-g",
+            "11.30"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC08-BP02"
+        ],
+        "GxP-EU-Annex-11": [
+            "7.1-data-storage-damage-protection"
+        ],
+        "NIST-800-53-Revision-4": [
+            "sc_28"
+        ],
+        "NIST-800-53-Revision-5": [
+            "au_9_3",
+            "cm_6_a",
+            "cm_9_b",
+            "cp_9_d",
+            "sc_8_3",
+            "sc_8_4",
+            "sc_13_a",
+            "sc_28_1",
+            "si_19_4"
+        ],
+        "AWS-Audit-Manager-Control-Tower-Guardrails": [
+            "1.0.3"
+        ],
+        "FFIEC": [
+            "d3-pc-am-b-12"
+        ]
+    },
+    "Categories": [
+        "encryption"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "850960379897",
+    "ResourceArn": "arn:aws:iam::850960379897:root",
+    "ResourceTags": {}
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_ebs_volume_encryption-850960379897-ap-southeast-1-vol-0315a657b59b02937",
+    "Provider": "aws",
+    "CheckID": "ec2_ebs_volume_encryption",
+    "CheckTitle": "Ensure there are no EBS Volumes unencrypted.",
+    "CheckType": [
+        "Data Protection"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "volume",
+    "Status": "FAIL",
+    "StatusExtended": "EBS Snapshot vol-0315a657b59b02937 is unencrypted.",
+    "Severity": "medium",
+    "ResourceType": "AwsEc2Volume",
+    "ResourceDetails": "",
+    "Description": "Ensure there are no EBS Volumes unencrypted.",
+    "Risk": "Data encryption at rest prevents data visibility in the event of its unauthorized access or theft.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Encrypt all EBS volumes and Enable Encryption by default You can configure your AWS account to enforce the encryption of the new EBS volumes and snapshot copies that you create. For example; Amazon EBS encrypts the EBS volumes created when you launch an instance and the snapshots that you copy from an unencrypted snapshot.",
+            "Url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html"
+        }
+    },
+    "Compliance": {
+        "CISA": [
+            "your-systems-3",
+            "your-data-1",
+            "your-data-2"
+        ],
+        "CIS-1.4": [
+            "2.2.1"
+        ],
+        "CIS-1.5": [
+            "2.2.1"
+        ],
+        "MITRE-ATTACK": [
+            "T1119"
+        ],
+        "GDPR": [
+            "article_32"
+        ],
+        "AWS-Foundational-Security-Best-Practices": [
+            "ec2"
+        ],
+        "HIPAA": [
+            "164_308_a_1_ii_b",
+            "164_308_a_4_ii_a",
+            "164_312_a_2_iv",
+            "164_312_c_1",
+            "164_312_c_2",
+            "164_312_e_2_ii"
+        ],
+        "CIS-2.0": [
+            "2.2.1"
+        ],
+        "GxP-21-CFR-Part-11": [
+            "11.10-g",
+            "11.30"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC08-BP02"
+        ],
+        "GxP-EU-Annex-11": [
+            "7.1-data-storage-damage-protection"
+        ],
+        "NIST-800-171-Revision-2": [
+            "3_5_10",
+            "3_13_11",
+            "3_13_16"
+        ],
+        "NIST-800-53-Revision-4": [
+            "sc_28"
+        ],
+        "NIST-800-53-Revision-5": [
+            "au_9_3",
+            "cm_6_a",
+            "cm_9_b",
+            "cp_9_d",
+            "sc_8_3",
+            "sc_8_4",
+            "sc_13_a",
+            "sc_28_1",
+            "si_19_4"
+        ],
+        "ENS-RD2022": [
+            "mp.si.2.aws.kms.1"
+        ],
+        "NIST-CSF-1.1": [
+            "ds_1"
+        ],
+        "RBI-Cyber-Security-Framework": [
+            "annex_i_1_3"
+        ],
+        "FFIEC": [
+            "d3-pc-am-b-12"
+        ],
+        "FedRamp-Moderate-Revision-4": [
+            "sc-28"
+        ]
+    },
+    "Categories": [
+        "encryption"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "vol-0315a657b59b02937",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:volume/vol-0315a657b59b02937",
+    "ResourceTags": {}
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_ebs_volume_snapshots_exists-850960379897-ap-southeast-1-vol-0315a657b59b02937",
+    "Provider": "aws",
+    "CheckID": "ec2_ebs_volume_snapshots_exists",
+    "CheckTitle": "Check if EBS snapshots exists.",
+    "CheckType": [
+        "Data Protection"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "snapshot",
+    "Status": "FAIL",
+    "StatusExtended": "Snapshots not found for the EBS volume vol-0315a657b59b02937.",
+    "Severity": "medium",
+    "ResourceType": "AwsEc2Snapshot",
+    "ResourceDetails": "",
+    "Description": "Check if EBS snapshots exists.",
+    "Risk": "Ensure that your EBS volumes (available or in-use) have recent snapshots (taken weekly) available for point-in-time recovery for a better, more reliable data backup strategy.",
+    "RelatedUrl": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSSnapshots.html",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "aws ec2 --region <REGION> create-snapshot --volume-id <VOLUME-ID>",
+            "Other": "https://www.trendmicro.com/cloudoneconformity-staging/knowledge-base/aws/EBS/ebs-volumes-recent-snapshots.html"
+        },
+        "Recommendation": {
+            "Text": "Creating point-in-time EBS snapshots periodically will allow you to handle efficiently your data recovery process in the event of a failure, to save your data before shutting down an EC2 instance, to back up data for geographical expansion and to maintain your disaster recovery stack up to date.",
+            "Url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSSnapshots.html"
+        }
+    },
+    "Compliance": {},
+    "Categories": [
+        "forensics-ready"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "vol-0315a657b59b02937",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:volume/vol-0315a657b59b02937",
+    "ResourceTags": {}
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_elastic_ip_unassigned-850960379897-ap-southeast-1-3.0.204.89",
+    "Provider": "aws",
+    "CheckID": "ec2_elastic_ip_unassigned",
+    "CheckTitle": "Check if there is any unassigned Elastic IP.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "",
+    "Status": "PASS",
+    "StatusExtended": "Elastic IP 3.0.204.89 is associated with an instance or network interface.",
+    "Severity": "low",
+    "ResourceType": "AwsEc2Eip",
+    "ResourceDetails": "",
+    "Description": "Check if there is any unassigned Elastic IP.",
+    "Risk": "Unassigned Elastic IPs may result in extra cost.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "https://docs.bridgecrew.io/docs/general_19#cloudformation",
+            "Terraform": "https://docs.bridgecrew.io/docs/general_19#terraform",
+            "CLI": "aws ec2 release-address --public-ip <theIPyoudontneed>",
+            "Other": "https://docs.bridgecrew.io/docs/general_19#ec2-console"
+        },
+        "Recommendation": {
+            "Text": "Ensure Elastic IPs are not unassigned.",
+            "Url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html"
+        }
+    },
+    "Compliance": {
+        "CISA": [
+            "your-systems-1",
+            "your_-urroundings-1"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC03-BP06"
+        ],
+        "NIST-800-171-Revision-2": [
+            "3_4_1"
+        ],
+        "NIST-CSF-1.1": [
+            "ds_3"
+        ],
+        "FFIEC": [
+            "d1-g-it-b-1"
+        ],
+        "PCI-3.2.1": [
+            "ec2"
+        ]
+    },
+    "Categories": [],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "3.0.204.89",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:eip-allocation/eipalloc-07f5b06b3ebf01700",
+    "ResourceTags": {
+        "Name": "Elastic IP Main",
+        "Project": "Network Hardened",
+        "Environment": "Development"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_instance_detailed_monitoring_enabled-850960379897-ap-southeast-1-i-049f3edfc0d598daa",
+    "Provider": "aws",
+    "CheckID": "ec2_instance_detailed_monitoring_enabled",
+    "CheckTitle": "Check if EC2 instances have detailed monitoring enabled.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "",
+    "Status": "FAIL",
+    "StatusExtended": "EC2 Instance i-049f3edfc0d598daa does not have detailed monitoring enabled.",
+    "Severity": "low",
+    "ResourceType": "AwsEc2Instance",
+    "ResourceDetails": "",
+    "Description": "Check if EC2 instances have detailed monitoring enabled.",
+    "Risk": "Enabling detailed monitoring provides enhanced monitoring and granular insights into EC2 instance metrics. Not having detailed monitoring enabled may limit the ability to troubleshoot performance issues effectively.",
+    "RelatedUrl": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-cloudwatch-new.html",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "https://www.trendmicro.com/cloudoneconformity/knowledge-base/aws/EC2/instance-detailed-monitoring.html",
+            "Terraform": "https://docs.bridgecrew.io/docs/ensure-that-detailed-monitoring-is-enabled-for-ec2-instances#terraform",
+            "CLI": "https://www.trendmicro.com/cloudoneconformity/knowledge-base/aws/EC2/instance-detailed-monitoring.html",
+            "Other": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-cloudwatch-new.html#enable-detailed-monitoring-instance"
+        },
+        "Recommendation": {
+            "Text": "Enable detailed monitoring for EC2 instances to gain better insights into performance metrics.",
+            "Url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-cloudwatch-new.html#enable-detailed-monitoring-instance"
+        }
+    },
+    "Compliance": {},
+    "Categories": [],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "i-049f3edfc0d598daa",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:instance/i-049f3edfc0d598daa",
+    "ResourceTags": {
+        "Name": "Tiny EC2 Instance Main",
+        "Project": "Network Basic",
+        "Environment": "Development"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_instance_detailed_monitoring_enabled-850960379897-ap-southeast-1-i-00a3ae5c672f62596",
+    "Provider": "aws",
+    "CheckID": "ec2_instance_detailed_monitoring_enabled",
+    "CheckTitle": "Check if EC2 instances have detailed monitoring enabled.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "",
+    "Status": "FAIL",
+    "StatusExtended": "EC2 Instance i-00a3ae5c672f62596 does not have detailed monitoring enabled.",
+    "Severity": "low",
+    "ResourceType": "AwsEc2Instance",
+    "ResourceDetails": "",
+    "Description": "Check if EC2 instances have detailed monitoring enabled.",
+    "Risk": "Enabling detailed monitoring provides enhanced monitoring and granular insights into EC2 instance metrics. Not having detailed monitoring enabled may limit the ability to troubleshoot performance issues effectively.",
+    "RelatedUrl": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-cloudwatch-new.html",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "https://www.trendmicro.com/cloudoneconformity/knowledge-base/aws/EC2/instance-detailed-monitoring.html",
+            "Terraform": "https://docs.bridgecrew.io/docs/ensure-that-detailed-monitoring-is-enabled-for-ec2-instances#terraform",
+            "CLI": "https://www.trendmicro.com/cloudoneconformity/knowledge-base/aws/EC2/instance-detailed-monitoring.html",
+            "Other": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-cloudwatch-new.html#enable-detailed-monitoring-instance"
+        },
+        "Recommendation": {
+            "Text": "Enable detailed monitoring for EC2 instances to gain better insights into performance metrics.",
+            "Url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-cloudwatch-new.html#enable-detailed-monitoring-instance"
+        }
+    },
+    "Compliance": {},
+    "Categories": [],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "i-00a3ae5c672f62596",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:instance/i-00a3ae5c672f62596",
+    "ResourceTags": {
+        "Project": "Network Hardened",
+        "Name": "Tiny EC2 Instance Main",
+        "Environment": "Development"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_instance_imdsv2_enabled-850960379897-ap-southeast-1-i-00a3ae5c672f62596",
+    "Provider": "aws",
+    "CheckID": "ec2_instance_imdsv2_enabled",
+    "CheckTitle": "Check if EC2 Instance Metadata Service Version 2 (IMDSv2) is Enabled and Required.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "",
+    "Status": "PASS",
+    "StatusExtended": "EC2 Instance i-00a3ae5c672f62596 has IMDSv2 enabled and required.",
+    "Severity": "medium",
+    "ResourceType": "AwsEc2Instance",
+    "ResourceDetails": "",
+    "Description": "Check if EC2 Instance Metadata Service Version 2 (IMDSv2) is Enabled and Required.",
+    "Risk": "Using IMDSv2 will protect from misconfiguration and SSRF vulnerabilities. IMDSv1 will not.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "https://docs.bridgecrew.io/docs/bc_aws_general_31#cloudformation",
+            "Terraform": "https://docs.bridgecrew.io/docs/bc_aws_general_31#terraform",
+            "CLI": "aws ec2 modify-instance-metadata-options --instance-id <instance-id> --http-tokens required --http-endpoint enabled",
+            "Other": "https://www.trendmicro.com/cloudoneconformity/knowledge-base/aws/EC2/require-imds-v2.html"
+        },
+        "Recommendation": {
+            "Text": "If you don't need IMDS you can turn it off. Using aws-cli you can force the instance to use only IMDSv2.",
+            "Url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html#configuring-instance-metadata-options"
+        }
+    },
+    "Compliance": {
+        "SOC2": [
+            "cc_7_2"
+        ],
+        "MITRE-ATTACK": [
+            "T1552"
+        ],
+        "AWS-Foundational-Security-Best-Practices": [
+            "ec2"
+        ],
+        "CIS-2.0": [
+            "5.6"
+        ],
+        "GxP-21-CFR-Part-11": [
+            "11.10-d",
+            "11.10-g"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC03-BP01",
+            "SEC06-BP01"
+        ],
+        "NIST-800-171-Revision-2": [
+            "3_12_4"
+        ],
+        "NIST-800-53-Revision-4": [
+            "ac_6",
+            "ca_7",
+            "si_4_2",
+            "si_4"
+        ],
+        "NIST-800-53-Revision-5": [
+            "ac_2_6",
+            "ac_3",
+            "ac_3_3",
+            "ac_3_3_a",
+            "ac_3_3_b_1",
+            "ac_3_3_b_2",
+            "ac_3_3_b_3",
+            "ac_3_3_b_4",
+            "ac_3_3_b_5",
+            "ac_3_3_c",
+            "ac_3_4",
+            "ac_3_4_a",
+            "ac_3_4_b",
+            "ac_3_4_c",
+            "ac_3_4_d",
+            "ac_3_4_e",
+            "ac_3_7",
+            "ac_3_8",
+            "ac_3_12_a",
+            "ac_3_13",
+            "ac_3_15_a",
+            "ac_3_15_b",
+            "ac_4_28",
+            "ac_6",
+            "ac_24",
+            "cm_5_1_a",
+            "mp_2",
+            "sc_23_3"
+        ],
+        "NIST-CSF-1.1": [
+            "cm_2",
+            "cm_5",
+            "cp_4",
+            "cp_5",
+            "ra_5",
+            "sc_4"
+        ],
+        "FedRamp-Moderate-Revision-4": [
+            "ac-3",
+            "ac-6",
+            "ca-7-a-b",
+            "si-4-2",
+            "si-4-4",
+            "si-4-5",
+            "si-4-a-b-c"
+        ],
+        "FedRAMP-Low-Revision-4": [
+            "ac-3",
+            "ca-7"
+        ]
+    },
+    "Categories": [],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "i-00a3ae5c672f62596",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:instance/i-00a3ae5c672f62596",
+    "ResourceTags": {
+        "Project": "Network Hardened",
+        "Name": "Tiny EC2 Instance Main",
+        "Environment": "Development"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_instance_internet_facing_with_instance_profile-850960379897-ap-southeast-1-i-00a3ae5c672f62596",
+    "Provider": "aws",
+    "CheckID": "ec2_instance_internet_facing_with_instance_profile",
+    "CheckTitle": "Check for internet facing EC2 instances with Instance Profiles attached.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "",
+    "Status": "PASS",
+    "StatusExtended": "EC2 Instance i-00a3ae5c672f62596 is not internet facing with an instance profile.",
+    "Severity": "medium",
+    "ResourceType": "AwsEc2Instance",
+    "ResourceDetails": "",
+    "Description": "Check for internet facing EC2 instances with Instance Profiles attached.",
+    "Risk": "Exposing an EC2 directly to internet increases the attack surface and therefore the risk of compromise.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Use an ALB and apply WAF ACL.",
+            "Url": "https://aws.amazon.com/blogs/aws/aws-web-application-firewall-waf-for-application-load-balancers/"
+        }
+    },
+    "Compliance": {
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC06-BP01"
+        ],
+        "ENS-RD2022": [
+            "mp.com.4.aws.vpc.2"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "i-00a3ae5c672f62596",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:instance/i-00a3ae5c672f62596",
+    "ResourceTags": {
+        "Project": "Network Hardened",
+        "Name": "Tiny EC2 Instance Main",
+        "Environment": "Development"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_instance_managed_by_ssm-850960379897-ap-southeast-1-i-00a3ae5c672f62596",
+    "Provider": "aws",
+    "CheckID": "ec2_instance_managed_by_ssm",
+    "CheckTitle": "Check if EC2 instances are managed by Systems Manager.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "instance",
+    "Status": "FAIL",
+    "StatusExtended": "EC2 Instance i-00a3ae5c672f62596 is not managed by Systems Manager.",
+    "Severity": "medium",
+    "ResourceType": "AwsEc2Instance",
+    "ResourceDetails": "",
+    "Description": "Check if EC2 instances are managed by Systems Manager.",
+    "Risk": "AWS Config provides AWS Managed Rules, which are predefined, customizable rules that AWS Config uses to evaluate whether your AWS resource configurations comply with common best practices.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": "https://www.trendmicro.com/cloudoneconformity/knowledge-base/aws/SSM/ssm-managed-instances.html"
+        },
+        "Recommendation": {
+            "Text": "Verify and apply Systems Manager Prerequisites.",
+            "Url": "https://docs.aws.amazon.com/systems-manager/latest/userguide/managed_instances.html"
+        }
+    },
+    "Compliance": {
+        "CISA": [
+            "your-systems-1"
+        ],
+        "SOC2": [
+            "cc_3_2",
+            "cc_7_1"
+        ],
+        "AWS-Foundational-Security-Best-Practices": [
+            "ssm"
+        ],
+        "HIPAA": [
+            "164_308_a_5_ii_b"
+        ],
+        "GxP-21-CFR-Part-11": [
+            "11.10-a",
+            "11.10-h"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC01-BP06",
+            "SEC06-BP04",
+            "SEC06-BP05"
+        ],
+        "NIST-800-171-Revision-2": [
+            "3_4_1",
+            "3_4_2",
+            "3_4_6",
+            "3_4_9",
+            "3_14_2"
+        ],
+        "NIST-800-53-Revision-4": [
+            "cm_2",
+            "cm_7",
+            "cm_8_1",
+            "cm_8_3",
+            "sa_3",
+            "sa_10",
+            "si_2_2",
+            "si_7_1"
+        ],
+        "NIST-800-53-Revision-5": [
+            "cm_2_a",
+            "cm_2_b",
+            "cm_2_b_1",
+            "cm_2_b_2",
+            "cm_2_b_3",
+            "cm_2_2",
+            "cm_3_3",
+            "cm_6",
+            "cm_8_1",
+            "cm_8_2",
+            "cm_8_3_a",
+            "cm_8_6",
+            "cm_8_a",
+            "cm_8_a_1",
+            "cm_8_a_2",
+            "cm_8_a_3",
+            "cm_8_a_4",
+            "cm_8_a_5",
+            "cm_8_b",
+            "si_3_c_2"
+        ],
+        "ENS-RD2022": [
+            "op.acc.4.aws.iam.6",
+            "op.acc.4.aws.sys.1",
+            "op.exp.1.aws.sys.1",
+            "op.exp.4.aws.sys.2",
+            "op.exp.4.r2.aws.sys.1",
+            "op.exp.9.aws.img.1"
+        ],
+        "NIST-CSF-1.1": [
+            "am_1",
+            "am_2",
+            "ds_3",
+            "ds_7",
+            "ds_8",
+            "ip_1",
+            "ip_2",
+            "ip_12"
+        ],
+        "RBI-Cyber-Security-Framework": [
+            "annex_i_1_1"
+        ],
+        "FFIEC": [
+            "d1-g-it-b-1",
+            "d3-pc-im-b-5"
+        ],
+        "PCI-3.2.1": [
+            "ssm"
+        ],
+        "FedRamp-Moderate-Revision-4": [
+            "cm-2",
+            "cm-7-a",
+            "cm-8-1",
+            "cm-8-3-a",
+            "sa-3-a",
+            "sa-10",
+            "si-2-2",
+            "si-7-1"
+        ],
+        "FedRAMP-Low-Revision-4": [
+            "cm-8",
+            "sa-3"
+        ]
+    },
+    "Categories": [],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "i-00a3ae5c672f62596",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:instance/i-00a3ae5c672f62596",
+    "ResourceTags": {
+        "Project": "Network Hardened",
+        "Name": "Tiny EC2 Instance Main",
+        "Environment": "Development"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_instance_older_than_specific_days-850960379897-ap-southeast-1-i-049f3edfc0d598daa",
+    "Provider": "aws",
+    "CheckID": "ec2_instance_older_than_specific_days",
+    "CheckTitle": "Check EC2 Instances older than specific days.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "",
+    "Status": "PASS",
+    "StatusExtended": "EC2 Instance i-049f3edfc0d598daa is not running.",
+    "Severity": "medium",
+    "ResourceType": "AwsEc2Instance",
+    "ResourceDetails": "",
+    "Description": "Check EC2 Instances older than specific days.",
+    "Risk": "Having old instances within your AWS account could increase the risk of having vulnerable software.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": "https://www.trendmicro.com/cloudoneconformity/knowledge-base/aws/EC2/ec2-instance-too-old.html"
+        },
+        "Recommendation": {
+            "Text": "Check if software running in the instance is up to date and patched accordingly. Use AWS Systems Manager to patch instances and view patching compliance information.",
+            "Url": "https://docs.aws.amazon.com/systems-manager/latest/userguide/viewing-patch-compliance-results.html"
+        }
+    },
+    "Compliance": {
+        "CISA": [
+            "your-systems-1"
+        ],
+        "AWS-Foundational-Security-Best-Practices": [
+            "ec2"
+        ],
+        "HIPAA": [
+            "164_308_a_1_ii_b"
+        ],
+        "GxP-21-CFR-Part-11": [
+            "11.10-a"
+        ],
+        "NIST-800-171-Revision-2": [
+            "3_4_1",
+            "3_4_2"
+        ],
+        "NIST-800-53-Revision-4": [
+            "cm_2"
+        ],
+        "NIST-800-53-Revision-5": [
+            "cm_2_a",
+            "cm_2_b",
+            "cm_2_b_1",
+            "cm_2_b_2",
+            "cm_2_b_3",
+            "cm_2_2",
+            "cm_3_3",
+            "cm_8_6"
+        ],
+        "NIST-CSF-1.1": [
+            "ds_7",
+            "ip_1"
+        ],
+        "FFIEC": [
+            "d1-g-it-b-1"
+        ],
+        "FedRamp-Moderate-Revision-4": [
+            "cm-2"
+        ],
+        "FedRAMP-Low-Revision-4": [
+            "cm-2"
+        ]
+    },
+    "Categories": [],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "i-049f3edfc0d598daa",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:instance/i-049f3edfc0d598daa",
+    "ResourceTags": {
+        "Name": "Tiny EC2 Instance Main",
+        "Project": "Network Basic",
+        "Environment": "Development"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_instance_older_than_specific_days-850960379897-ap-southeast-1-i-00a3ae5c672f62596",
+    "Provider": "aws",
+    "CheckID": "ec2_instance_older_than_specific_days",
+    "CheckTitle": "Check EC2 Instances older than specific days.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "",
+    "Status": "PASS",
+    "StatusExtended": "EC2 Instance i-00a3ae5c672f62596 is not older than 180 days (0 days).",
+    "Severity": "medium",
+    "ResourceType": "AwsEc2Instance",
+    "ResourceDetails": "",
+    "Description": "Check EC2 Instances older than specific days.",
+    "Risk": "Having old instances within your AWS account could increase the risk of having vulnerable software.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": "https://www.trendmicro.com/cloudoneconformity/knowledge-base/aws/EC2/ec2-instance-too-old.html"
+        },
+        "Recommendation": {
+            "Text": "Check if software running in the instance is up to date and patched accordingly. Use AWS Systems Manager to patch instances and view patching compliance information.",
+            "Url": "https://docs.aws.amazon.com/systems-manager/latest/userguide/viewing-patch-compliance-results.html"
+        }
+    },
+    "Compliance": {
+        "CISA": [
+            "your-systems-1"
+        ],
+        "AWS-Foundational-Security-Best-Practices": [
+            "ec2"
+        ],
+        "HIPAA": [
+            "164_308_a_1_ii_b"
+        ],
+        "GxP-21-CFR-Part-11": [
+            "11.10-a"
+        ],
+        "NIST-800-171-Revision-2": [
+            "3_4_1",
+            "3_4_2"
+        ],
+        "NIST-800-53-Revision-4": [
+            "cm_2"
+        ],
+        "NIST-800-53-Revision-5": [
+            "cm_2_a",
+            "cm_2_b",
+            "cm_2_b_1",
+            "cm_2_b_2",
+            "cm_2_b_3",
+            "cm_2_2",
+            "cm_3_3",
+            "cm_8_6"
+        ],
+        "NIST-CSF-1.1": [
+            "ds_7",
+            "ip_1"
+        ],
+        "FFIEC": [
+            "d1-g-it-b-1"
+        ],
+        "FedRamp-Moderate-Revision-4": [
+            "cm-2"
+        ],
+        "FedRAMP-Low-Revision-4": [
+            "cm-2"
+        ]
+    },
+    "Categories": [],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "i-00a3ae5c672f62596",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:instance/i-00a3ae5c672f62596",
+    "ResourceTags": {
+        "Project": "Network Hardened",
+        "Name": "Tiny EC2 Instance Main",
+        "Environment": "Development"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_instance_profile_attached-850960379897-ap-southeast-1-i-00a3ae5c672f62596",
+    "Provider": "aws",
+    "CheckID": "ec2_instance_profile_attached",
+    "CheckTitle": "Ensure IAM instance roles are used for AWS resource access from instances",
+    "CheckType": [
+        "Software and Configuration Checks/Industry and Regulatory Standards/CIS AWS Foundations Benchmark"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "",
+    "Status": "FAIL",
+    "StatusExtended": "EC2 Instance i-00a3ae5c672f62596 not associated with an Instance Profile Role.",
+    "Severity": "medium",
+    "ResourceType": "AwsEc2Instance",
+    "ResourceDetails": "",
+    "Description": "Ensure IAM instance roles are used for AWS resource access from instances.",
+    "Risk": "AWS access from within AWS instances can be done by either encoding AWS keys into AWS API calls or by assigning the instance to a role which has an appropriate permissions policy for the required access. AWS IAM roles reduce the risks associated with sharing and rotating credentials that can be used outside of AWS itself. If credentials are compromised, they can be used from outside of the AWS account.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": "https://github.com/cloudmatos/matos/tree/master/remediations/aws/ec2/attach_iam_roles_ec2_instances"
+        },
+        "Recommendation": {
+            "Text": "Create an IAM instance role if necessary and attach it to the corresponding EC2 instance..",
+            "Url": "http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html"
+        }
+    },
+    "Compliance": {
+        "CIS-1.4": [
+            "1.18"
+        ],
+        "CIS-1.5": [
+            "1.18"
+        ],
+        "CIS-2.0": [
+            "1.18"
+        ],
+        "GxP-21-CFR-Part-11": [
+            "11.10-d",
+            "11.10-g"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC03-BP01",
+            "SEC03-BP02",
+            "SEC06-BP04",
+            "SEC06-BP05"
+        ],
+        "NIST-800-171-Revision-2": [
+            "3_1_1",
+            "3_1_2"
+        ],
+        "NIST-800-53-Revision-5": [
+            "ac_3",
+            "cm_5_1_a",
+            "cm_6_a"
+        ],
+        "FFIEC": [
+            "d3-pc-am-b-1"
+        ]
+    },
+    "Categories": [],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "i-00a3ae5c672f62596",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:instance/i-00a3ae5c672f62596",
+    "ResourceTags": {
+        "Project": "Network Hardened",
+        "Name": "Tiny EC2 Instance Main",
+        "Environment": "Development"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_instance_public_ip-850960379897-ap-southeast-1-i-00a3ae5c672f62596",
+    "Provider": "aws",
+    "CheckID": "ec2_instance_public_ip",
+    "CheckTitle": "Check for EC2 Instances with Public IP.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "instance",
+    "Status": "FAIL",
+    "StatusExtended": "EC2 Instance i-00a3ae5c672f62596 has a Public IP: 3.0.204.89 ().",
+    "Severity": "medium",
+    "ResourceType": "AwsEc2Instance",
+    "ResourceDetails": "",
+    "Description": "Check for EC2 Instances with Public IP.",
+    "Risk": "Exposing an EC2 directly to internet increases the attack surface and therefore the risk of compromise.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "https://docs.bridgecrew.io/docs/public_12#cloudformation",
+            "Terraform": "https://docs.bridgecrew.io/docs/public_12#terraform",
+            "CLI": "",
+            "Other": "https://docs.bridgecrew.io/docs/public_12#aws-console"
+        },
+        "Recommendation": {
+            "Text": "Use an ALB and apply WAF ACL.",
+            "Url": "https://aws.amazon.com/blogs/aws/aws-web-application-firewall-waf-for-application-load-balancers/"
+        }
+    },
+    "Compliance": {
+        "CISA": [
+            "your-systems-3",
+            "your-data-2"
+        ],
+        "SOC2": [
+            "cc_6_6"
+        ],
+        "MITRE-ATTACK": [
+            "T1190"
+        ],
+        "AWS-Foundational-Security-Best-Practices": [
+            "ec2"
+        ],
+        "HIPAA": [
+            "164_308_a_1_ii_b",
+            "164_308_a_3_i",
+            "164_312_a_1"
+        ],
+        "GxP-21-CFR-Part-11": [
+            "11.10-d",
+            "11.10-g"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC03-BP07"
+        ],
+        "NIST-800-171-Revision-2": [
+            "3_1_1",
+            "3_1_2",
+            "3_1_3",
+            "3_1_14",
+            "3_13_2",
+            "3_13_5"
+        ],
+        "NIST-800-53-Revision-4": [
+            "ac_4",
+            "ac_6",
+            "ac_21",
+            "sc_7_3",
+            "sc_7"
+        ],
+        "NIST-800-53-Revision-5": [
+            "ac_2_6",
+            "ac_3",
+            "ac_3_7",
+            "ac_4_21",
+            "ac_6",
+            "ac_17_b",
+            "ac_17_1",
+            "ac_17_4_a",
+            "ac_17_9",
+            "ac_17_10",
+            "mp_2",
+            "sc_7_2",
+            "sc_7_3",
+            "sc_7_7",
+            "sc_7_9_a",
+            "sc_7_11",
+            "sc_7_12",
+            "sc_7_16",
+            "sc_7_20",
+            "sc_7_21",
+            "sc_7_24_b",
+            "sc_7_25",
+            "sc_7_26",
+            "sc_7_27",
+            "sc_7_28",
+            "sc_7_a",
+            "sc_7_b",
+            "sc_7_c",
+            "sc_25"
+        ],
+        "NIST-CSF-1.1": [
+            "ac_3",
+            "ac_5",
+            "ip_8"
+        ],
+        "RBI-Cyber-Security-Framework": [
+            "annex_i_1_3"
+        ],
+        "FFIEC": [
+            "d3-pc-im-b-1"
+        ],
+        "FedRamp-Moderate-Revision-4": [
+            "ac-3",
+            "ac-4",
+            "ac-6",
+            "ac-17-1",
+            "ac-21-b",
+            "cm-2",
+            "sc-7-3",
+            "sc-7"
+        ],
+        "FedRAMP-Low-Revision-4": [
+            "ac-3",
+            "ac-17",
+            "cm-2",
+            "sc-7"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "i-00a3ae5c672f62596",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:instance/i-00a3ae5c672f62596",
+    "ResourceTags": {
+        "Project": "Network Hardened",
+        "Name": "Tiny EC2 Instance Main",
+        "Environment": "Development"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_instance_secrets_user_data-850960379897-ap-southeast-1-i-00a3ae5c672f62596",
+    "Provider": "aws",
+    "CheckID": "ec2_instance_secrets_user_data",
+    "CheckTitle": "Find secrets in EC2 User Data.",
+    "CheckType": [
+        "IAM"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "",
+    "Status": "PASS",
+    "StatusExtended": "No secrets found in EC2 instance i-00a3ae5c672f62596 since User Data is empty.",
+    "Severity": "critical",
+    "ResourceType": "AwsEc2Instance",
+    "ResourceDetails": "",
+    "Description": "Find secrets in EC2 User Data.",
+    "Risk": "Secrets hardcoded into instance user data can be used by malware and bad actors to gain lateral access to other services.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "https://docs.bridgecrew.io/docs/bc_aws_secrets_1#cloudformation",
+            "Terraform": "https://docs.bridgecrew.io/docs/bc_aws_secrets_1#terraform",
+            "CLI": "https://docs.bridgecrew.io/docs/bc_aws_secrets_1#cli-command",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Implement automated detective control (e.g. using tools like Prowler) to scan accounts for passwords and secrets. Use secrets manager service to store and retrieve passwords and secrets.",
+            "Url": "https://docs.aws.amazon.com/secretsmanager/latest/userguide/tutorials_basic.html"
+        }
+    },
+    "Compliance": {
+        "MITRE-ATTACK": [
+            "T1552"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC02-BP03"
+        ]
+    },
+    "Categories": [
+        "secrets"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "i-00a3ae5c672f62596",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:instance/i-00a3ae5c672f62596",
+    "ResourceTags": {
+        "Project": "Network Hardened",
+        "Name": "Tiny EC2 Instance Main",
+        "Environment": "Development"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_networkacl_allow_ingress_any_port-850960379897-ap-southeast-1-acl-0607a8ae41e75fc27",
+    "Provider": "aws",
+    "CheckID": "ec2_networkacl_allow_ingress_any_port",
+    "CheckTitle": "Ensure no Network ACLs allow ingress from 0.0.0.0/0 to any port.",
+    "CheckType": [
+        "Software and Configuration Checks",
+        "Industry and Regulatory Standards",
+        "CIS AWS Foundations Benchmark"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "networkacl",
+    "Status": "FAIL",
+    "StatusExtended": "Network ACL acl-0607a8ae41e75fc27 has every port open to the Internet.",
+    "Severity": "medium",
+    "ResourceType": "AwsEc2NetworkAcl",
+    "ResourceDetails": "",
+    "Description": "Ensure no Network ACLs allow ingress from 0.0.0.0/0 to any port.",
+    "Risk": "Even having a perimeter firewall, having network acls open allows any user or malware with vpc access to scan for well known and sensitive ports and gain access to instance.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Apply Zero Trust approach. Implement a process to scan and remediate unrestricted or overly permissive network acls. Recommended best practices is to narrow the definition for the minimum ports required.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html"
+        }
+    },
+    "Compliance": {
+        "CISA": [
+            "your-data-2"
+        ],
+        "CIS-1.4": [
+            "5.1"
+        ],
+        "CIS-1.5": [
+            "5.1"
+        ],
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "AWS-Foundational-Security-Best-Practices": [
+            "ec2"
+        ],
+        "HIPAA": [
+            "164_308_a_1_ii_b",
+            "164_312_e_1"
+        ],
+        "CIS-2.0": [
+            "5.1"
+        ],
+        "GxP-21-CFR-Part-11": [
+            "11.10-d",
+            "11.10-g",
+            "11.10-k"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ],
+        "NIST-800-171-Revision-2": [
+            "3_1_1",
+            "3_1_2",
+            "3_1_3",
+            "3_1_14",
+            "3_1_20",
+            "3_4_1",
+            "3_4_7",
+            "3_13_1",
+            "3_13_2",
+            "3_13_5",
+            "3_13_6"
+        ],
+        "NIST-800-53-Revision-4": [
+            "ac_4",
+            "cm_2",
+            "sc_7_3",
+            "sc_7"
+        ],
+        "NIST-800-53-Revision-5": [
+            "ac_4_21",
+            "ac_17_b",
+            "ac_17_1",
+            "ac_17_4_a",
+            "ac_17_9",
+            "ac_17_10",
+            "cm_2_a",
+            "cm_2_2",
+            "cm_6_a",
+            "cm_7_b",
+            "cm_8_6",
+            "cm_9_b",
+            "sc_7_5",
+            "sc_7_7",
+            "sc_7_11",
+            "sc_7_12",
+            "sc_7_16",
+            "sc_7_21",
+            "sc_7_24_b",
+            "sc_7_25",
+            "sc_7_26",
+            "sc_7_27",
+            "sc_7_28",
+            "sc_7_a",
+            "sc_7_c"
+        ],
+        "NIST-CSF-1.1": [
+            "ae_1",
+            "ac_3",
+            "ac_5",
+            "pt_4"
+        ],
+        "RBI-Cyber-Security-Framework": [
+            "annex_i_1_3",
+            "annex_i_5_1"
+        ],
+        "FFIEC": [
+            "d3-pc-am-b-10",
+            "d3-pc-im-b-1",
+            "d3-pc-im-b-2",
+            "d3-pc-im-b-6",
+            "d4-c-co-b-2"
+        ],
+        "FedRamp-Moderate-Revision-4": [
+            "ac-4",
+            "ac-17-1",
+            "ac-21-b",
+            "cm-2",
+            "sc-4",
+            "sc-7-3",
+            "sc-7"
+        ],
+        "FedRAMP-Low-Revision-4": [
+            "ac-17",
+            "cm-2",
+            "sc-7"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "Infrastructure Security",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "acl-0607a8ae41e75fc27",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:network-acl/acl-0607a8ae41e75fc27",
+    "ResourceTags": {}
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_networkacl_allow_ingress_tcp_port_22-850960379897-ap-southeast-1-acl-0607a8ae41e75fc27",
+    "Provider": "aws",
+    "CheckID": "ec2_networkacl_allow_ingress_tcp_port_22",
+    "CheckTitle": "Ensure no Network ACLs allow ingress from 0.0.0.0/0 to SSH port 22",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "networkacl",
+    "Status": "FAIL",
+    "StatusExtended": "Network ACL acl-0607a8ae41e75fc27 has SSH port 22 open to the Internet.",
+    "Severity": "medium",
+    "ResourceType": "AwsEc2NetworkAcl",
+    "ResourceDetails": "",
+    "Description": "Ensure no Network ACLs allow ingress from 0.0.0.0/0 to SSH port 22",
+    "Risk": "Even having a perimeter firewall, having network acls open allows any user or malware with vpc access to scan for well known and sensitive ports and gain access to instance.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "https://docs.bridgecrew.io/docs/ensure-aws-nacl-does-not-allow-ingress-from-00000-to-port-22#cloudformation",
+            "Terraform": "https://docs.bridgecrew.io/docs/ensure-aws-nacl-does-not-allow-ingress-from-00000-to-port-22#terraform",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Apply Zero Trust approach. Implement a process to scan and remediate unrestricted or overly permissive network acls. Recommended best practices is to narrow the definition for the minimum ports required.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html"
+        }
+    },
+    "Compliance": {
+        "CIS-1.4": [
+            "5.1"
+        ],
+        "CIS-1.5": [
+            "5.1"
+        ],
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "CIS-2.0": [
+            "5.1"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP02",
+            "SEC05-BP03"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "acl-0607a8ae41e75fc27",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:network-acl/acl-0607a8ae41e75fc27",
+    "ResourceTags": {}
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_networkacl_allow_ingress_tcp_port_3389-850960379897-ap-southeast-1-acl-0607a8ae41e75fc27",
+    "Provider": "aws",
+    "CheckID": "ec2_networkacl_allow_ingress_tcp_port_3389",
+    "CheckTitle": "Ensure no Network ACLs allow ingress from 0.0.0.0/0 to Microsoft RDP port 3389",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "networkacl",
+    "Status": "FAIL",
+    "StatusExtended": "Network ACL acl-0607a8ae41e75fc27 has Microsoft RDP port 3389 open to the Internet.",
+    "Severity": "medium",
+    "ResourceType": "AwsEc2NetworkAcl",
+    "ResourceDetails": "",
+    "Description": "Ensure no Network ACLs allow ingress from 0.0.0.0/0 to Microsoft RDP port 3389",
+    "Risk": "Even having a perimeter firewall, having network acls open allows any user or malware with vpc access to scan for well known and sensitive ports and gain access to instance.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "https://docs.bridgecrew.io/docs/ensure-aws-nacl-does-not-allow-ingress-from-00000-to-port-3389#cloudformation",
+            "Terraform": "https://docs.bridgecrew.io/docs/ensure-aws-nacl-does-not-allow-ingress-from-00000-to-port-3389#terraform",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Apply Zero Trust approach. Implement a process to scan and remediate unrestricted or overly permissive network acls. Recommended best practices is to narrow the definition for the minimum ports required.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html"
+        }
+    },
+    "Compliance": {
+        "CIS-1.4": [
+            "5.1"
+        ],
+        "CIS-1.5": [
+            "5.1"
+        ],
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "CIS-2.0": [
+            "5.1"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "acl-0607a8ae41e75fc27",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:network-acl/acl-0607a8ae41e75fc27",
+    "ResourceTags": {}
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_any_port-850960379897-ap-southeast-1-sg-0c5fc65165567f9fc",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_any_port",
+    "CheckTitle": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to any port.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Security group default (sg-0c5fc65165567f9fc) does not have all ports open to the Internet.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "default",
+    "Description": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to any port.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "CISA": [
+            "your-systems-3",
+            "your-data-2"
+        ],
+        "CIS-1.4": [
+            "5.2"
+        ],
+        "CIS-1.5": [
+            "5.2",
+            "5.3"
+        ],
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "CIS-2.0": [
+            "5.2",
+            "5.3"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ],
+        "ENS-RD2022": [
+            "mp.com.1.aws.sg.2"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "sg-0c5fc65165567f9fc",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:security-group/sg-0c5fc65165567f9fc",
+    "ResourceTags": {
+        "Name": "Default Security Group (do not use)",
+        "Project": "Network Hardened",
+        "Environment": "Development"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_any_port-850960379897-ap-southeast-1-sg-0b6a1a57fb0b393e0",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_any_port",
+    "CheckTitle": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to any port.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Security group terraform-20250924034142150400000002 (sg-0b6a1a57fb0b393e0) does not have all ports open to the Internet.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "terraform-20250924034142150400000002",
+    "Description": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to any port.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "CISA": [
+            "your-systems-3",
+            "your-data-2"
+        ],
+        "CIS-1.4": [
+            "5.2"
+        ],
+        "CIS-1.5": [
+            "5.2",
+            "5.3"
+        ],
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "CIS-2.0": [
+            "5.2",
+            "5.3"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ],
+        "ENS-RD2022": [
+            "mp.com.1.aws.sg.2"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "sg-0b6a1a57fb0b393e0",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:security-group/sg-0b6a1a57fb0b393e0",
+    "ResourceTags": {
+        "Name": "Security Group Main",
+        "Environment": "Development",
+        "Project": "Network Hardened"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_port_mongodb_27017_27018-850960379897-ap-southeast-1-sg-0c5fc65165567f9fc",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_port_mongodb_27017_27018",
+    "CheckTitle": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to MongoDB ports 27017 and 27018.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Security group default (sg-0c5fc65165567f9fc) does not have MongoDB ports 27017 and 27018 open to the Internet.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "default",
+    "Description": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to MongoDB ports 27017 and 27018.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "sg-0c5fc65165567f9fc",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:security-group/sg-0c5fc65165567f9fc",
+    "ResourceTags": {
+        "Name": "Default Security Group (do not use)",
+        "Project": "Network Hardened",
+        "Environment": "Development"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_port_mongodb_27017_27018-850960379897-ap-southeast-1-sg-0b6a1a57fb0b393e0",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_port_mongodb_27017_27018",
+    "CheckTitle": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to MongoDB ports 27017 and 27018.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Security group terraform-20250924034142150400000002 (sg-0b6a1a57fb0b393e0) does not have MongoDB ports 27017 and 27018 open to the Internet.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "terraform-20250924034142150400000002",
+    "Description": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to MongoDB ports 27017 and 27018.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "sg-0b6a1a57fb0b393e0",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:security-group/sg-0b6a1a57fb0b393e0",
+    "ResourceTags": {
+        "Name": "Security Group Main",
+        "Environment": "Development",
+        "Project": "Network Hardened"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_ftp_port_20_21-850960379897-ap-southeast-1-sg-0c5fc65165567f9fc",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_ftp_port_20_21",
+    "CheckTitle": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to FTP ports 20 or 21.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Security group default (sg-0c5fc65165567f9fc) does not have FTP ports 20 and 21 open to the Internet.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "default",
+    "Description": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to FTP ports 20 or 21.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "sg-0c5fc65165567f9fc",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:security-group/sg-0c5fc65165567f9fc",
+    "ResourceTags": {
+        "Name": "Default Security Group (do not use)",
+        "Project": "Network Hardened",
+        "Environment": "Development"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_ftp_port_20_21-850960379897-ap-southeast-1-sg-0b6a1a57fb0b393e0",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_ftp_port_20_21",
+    "CheckTitle": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to FTP ports 20 or 21.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Security group terraform-20250924034142150400000002 (sg-0b6a1a57fb0b393e0) does not have FTP ports 20 and 21 open to the Internet.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "terraform-20250924034142150400000002",
+    "Description": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to FTP ports 20 or 21.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "sg-0b6a1a57fb0b393e0",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:security-group/sg-0b6a1a57fb0b393e0",
+    "ResourceTags": {
+        "Name": "Security Group Main",
+        "Environment": "Development",
+        "Project": "Network Hardened"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_22-850960379897-ap-southeast-1-sg-0c5fc65165567f9fc",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_22",
+    "CheckTitle": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to SSH port 22.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Security group default (sg-0c5fc65165567f9fc) does not have SSH port 22 open to the Internet.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "default",
+    "Description": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to SSH port 22.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "https://docs.bridgecrew.io/docs/networking_1-port-security#cloudformation",
+            "Terraform": "https://docs.bridgecrew.io/docs/networking_1-port-security#terraform",
+            "CLI": "https://docs.bridgecrew.io/docs/networking_1-port-security#cli-command",
+            "Other": "https://docs.bridgecrew.io/docs/networking_1-port-security#aws-console"
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "CISA": [
+            "your-systems-3",
+            "your-data-2"
+        ],
+        "SOC2": [
+            "cc_7_2"
+        ],
+        "CIS-1.4": [
+            "5.2"
+        ],
+        "CIS-1.5": [
+            "5.2",
+            "5.3"
+        ],
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "ISO27001-2013": [
+            "A.12.6",
+            "A.13.1"
+        ],
+        "HIPAA": [
+            "164_308_a_1_ii_b",
+            "164_312_e_1"
+        ],
+        "CIS-2.0": [
+            "5.2",
+            "5.3"
+        ],
+        "GxP-21-CFR-Part-11": [
+            "11.10-d",
+            "11.10-g"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ],
+        "NIST-800-171-Revision-2": [
+            "3_1_1",
+            "3_1_2",
+            "3_1_3",
+            "3_1_14",
+            "3_1_20",
+            "3_4_7",
+            "3_13_1",
+            "3_13_2",
+            "3_13_5",
+            "3_13_6"
+        ],
+        "NIST-800-53-Revision-4": [
+            "ac_4",
+            "sc_7_3",
+            "sc_7"
+        ],
+        "NIST-800-53-Revision-5": [
+            "ac_17_b",
+            "ac_17_1",
+            "ac_17_9",
+            "ac_17_10",
+            "cm_9_b",
+            "sc_7_7",
+            "sc_7_11",
+            "sc_7_12",
+            "sc_7_16",
+            "sc_7_21",
+            "sc_7_24_b",
+            "sc_7_25",
+            "sc_7_26",
+            "sc_7_27",
+            "sc_7_28",
+            "sc_7_a",
+            "sc_7_c"
+        ],
+        "NIST-CSF-1.1": [
+            "ae_1",
+            "ac_3",
+            "ac_5",
+            "ds_7",
+            "pt_4"
+        ],
+        "AWS-Audit-Manager-Control-Tower-Guardrails": [
+            "2.0.2"
+        ],
+        "RBI-Cyber-Security-Framework": [
+            "annex_i_5_1",
+            "annex_i_7_3"
+        ],
+        "FFIEC": [
+            "d3-pc-am-b-10",
+            "d3-pc-im-b-1",
+            "d3-pc-im-b-2",
+            "d3-pc-im-b-6",
+            "d4-c-co-b-2"
+        ],
+        "PCI-3.2.1": [
+            "ec2"
+        ],
+        "FedRamp-Moderate-Revision-4": [
+            "ac-4",
+            "ac-17-1",
+            "cm-2",
+            "sc-4",
+            "sc-7-3",
+            "sc-7"
+        ],
+        "FedRAMP-Low-Revision-4": [
+            "ac-17",
+            "cm-2",
+            "sc-7"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "sg-0c5fc65165567f9fc",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:security-group/sg-0c5fc65165567f9fc",
+    "ResourceTags": {
+        "Name": "Default Security Group (do not use)",
+        "Project": "Network Hardened",
+        "Environment": "Development"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_22-850960379897-ap-southeast-1-sg-0b6a1a57fb0b393e0",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_22",
+    "CheckTitle": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to SSH port 22.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "FAIL",
+    "StatusExtended": "Security group terraform-20250924034142150400000002 (sg-0b6a1a57fb0b393e0) has SSH port 22 open to the Internet.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "terraform-20250924034142150400000002",
+    "Description": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to SSH port 22.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "https://docs.bridgecrew.io/docs/networking_1-port-security#cloudformation",
+            "Terraform": "https://docs.bridgecrew.io/docs/networking_1-port-security#terraform",
+            "CLI": "https://docs.bridgecrew.io/docs/networking_1-port-security#cli-command",
+            "Other": "https://docs.bridgecrew.io/docs/networking_1-port-security#aws-console"
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "CISA": [
+            "your-systems-3",
+            "your-data-2"
+        ],
+        "SOC2": [
+            "cc_7_2"
+        ],
+        "CIS-1.4": [
+            "5.2"
+        ],
+        "CIS-1.5": [
+            "5.2",
+            "5.3"
+        ],
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "ISO27001-2013": [
+            "A.12.6",
+            "A.13.1"
+        ],
+        "HIPAA": [
+            "164_308_a_1_ii_b",
+            "164_312_e_1"
+        ],
+        "CIS-2.0": [
+            "5.2",
+            "5.3"
+        ],
+        "GxP-21-CFR-Part-11": [
+            "11.10-d",
+            "11.10-g"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ],
+        "NIST-800-171-Revision-2": [
+            "3_1_1",
+            "3_1_2",
+            "3_1_3",
+            "3_1_14",
+            "3_1_20",
+            "3_4_7",
+            "3_13_1",
+            "3_13_2",
+            "3_13_5",
+            "3_13_6"
+        ],
+        "NIST-800-53-Revision-4": [
+            "ac_4",
+            "sc_7_3",
+            "sc_7"
+        ],
+        "NIST-800-53-Revision-5": [
+            "ac_17_b",
+            "ac_17_1",
+            "ac_17_9",
+            "ac_17_10",
+            "cm_9_b",
+            "sc_7_7",
+            "sc_7_11",
+            "sc_7_12",
+            "sc_7_16",
+            "sc_7_21",
+            "sc_7_24_b",
+            "sc_7_25",
+            "sc_7_26",
+            "sc_7_27",
+            "sc_7_28",
+            "sc_7_a",
+            "sc_7_c"
+        ],
+        "NIST-CSF-1.1": [
+            "ae_1",
+            "ac_3",
+            "ac_5",
+            "ds_7",
+            "pt_4"
+        ],
+        "AWS-Audit-Manager-Control-Tower-Guardrails": [
+            "2.0.2"
+        ],
+        "RBI-Cyber-Security-Framework": [
+            "annex_i_5_1",
+            "annex_i_7_3"
+        ],
+        "FFIEC": [
+            "d3-pc-am-b-10",
+            "d3-pc-im-b-1",
+            "d3-pc-im-b-2",
+            "d3-pc-im-b-6",
+            "d4-c-co-b-2"
+        ],
+        "PCI-3.2.1": [
+            "ec2"
+        ],
+        "FedRamp-Moderate-Revision-4": [
+            "ac-4",
+            "ac-17-1",
+            "cm-2",
+            "sc-4",
+            "sc-7-3",
+            "sc-7"
+        ],
+        "FedRAMP-Low-Revision-4": [
+            "ac-17",
+            "cm-2",
+            "sc-7"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "sg-0b6a1a57fb0b393e0",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:security-group/sg-0b6a1a57fb0b393e0",
+    "ResourceTags": {
+        "Name": "Security Group Main",
+        "Environment": "Development",
+        "Project": "Network Hardened"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_3389-850960379897-ap-southeast-1-sg-0c5fc65165567f9fc",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_3389",
+    "CheckTitle": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to port 3389.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Security group default (sg-0c5fc65165567f9fc) does not have Microsoft RDP port 3389 open to the Internet.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "default",
+    "Description": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to port 3389.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "https://docs.bridgecrew.io/docs/networking_2#cloudformation",
+            "Terraform": "https://docs.bridgecrew.io/docs/networking_2#terraform",
+            "CLI": "https://docs.bridgecrew.io/docs/networking_2#cli-command",
+            "Other": "https://docs.bridgecrew.io/docs/networking_2#aws-console"
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "CIS-1.4": [
+            "5.2"
+        ],
+        "CIS-1.5": [
+            "5.2",
+            "5.3"
+        ],
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "ISO27001-2013": [
+            "A.12.6",
+            "A.13.1"
+        ],
+        "CIS-2.0": [
+            "5.2",
+            "5.3"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ],
+        "AWS-Audit-Manager-Control-Tower-Guardrails": [
+            "2.0.1"
+        ],
+        "PCI-3.2.1": [
+            "ec2"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "sg-0c5fc65165567f9fc",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:security-group/sg-0c5fc65165567f9fc",
+    "ResourceTags": {
+        "Name": "Default Security Group (do not use)",
+        "Project": "Network Hardened",
+        "Environment": "Development"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_3389-850960379897-ap-southeast-1-sg-0b6a1a57fb0b393e0",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_3389",
+    "CheckTitle": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to port 3389.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Security group terraform-20250924034142150400000002 (sg-0b6a1a57fb0b393e0) does not have Microsoft RDP port 3389 open to the Internet.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "terraform-20250924034142150400000002",
+    "Description": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to port 3389.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "https://docs.bridgecrew.io/docs/networking_2#cloudformation",
+            "Terraform": "https://docs.bridgecrew.io/docs/networking_2#terraform",
+            "CLI": "https://docs.bridgecrew.io/docs/networking_2#cli-command",
+            "Other": "https://docs.bridgecrew.io/docs/networking_2#aws-console"
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "CIS-1.4": [
+            "5.2"
+        ],
+        "CIS-1.5": [
+            "5.2",
+            "5.3"
+        ],
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "ISO27001-2013": [
+            "A.12.6",
+            "A.13.1"
+        ],
+        "CIS-2.0": [
+            "5.2",
+            "5.3"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ],
+        "AWS-Audit-Manager-Control-Tower-Guardrails": [
+            "2.0.1"
+        ],
+        "PCI-3.2.1": [
+            "ec2"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "sg-0b6a1a57fb0b393e0",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:security-group/sg-0b6a1a57fb0b393e0",
+    "ResourceTags": {
+        "Name": "Security Group Main",
+        "Environment": "Development",
+        "Project": "Network Hardened"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_cassandra_7199_9160_8888-850960379897-ap-southeast-1-sg-0c5fc65165567f9fc",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_cassandra_7199_9160_8888",
+    "CheckTitle": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Cassandra ports 7199 or 9160 or 8888.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Security group default (sg-0c5fc65165567f9fc) does not have Casandra ports 7199, 8888 and 9160 open to the Internet.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "default",
+    "Description": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Cassandra ports 7199 or 9160 or 8888.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "sg-0c5fc65165567f9fc",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:security-group/sg-0c5fc65165567f9fc",
+    "ResourceTags": {
+        "Name": "Default Security Group (do not use)",
+        "Project": "Network Hardened",
+        "Environment": "Development"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_cassandra_7199_9160_8888-850960379897-ap-southeast-1-sg-0b6a1a57fb0b393e0",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_cassandra_7199_9160_8888",
+    "CheckTitle": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Cassandra ports 7199 or 9160 or 8888.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Security group terraform-20250924034142150400000002 (sg-0b6a1a57fb0b393e0) does not have Casandra ports 7199, 8888 and 9160 open to the Internet.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "terraform-20250924034142150400000002",
+    "Description": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Cassandra ports 7199 or 9160 or 8888.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "sg-0b6a1a57fb0b393e0",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:security-group/sg-0b6a1a57fb0b393e0",
+    "ResourceTags": {
+        "Name": "Security Group Main",
+        "Environment": "Development",
+        "Project": "Network Hardened"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_elasticsearch_kibana_9200_9300_5601-850960379897-ap-southeast-1-sg-0c5fc65165567f9fc",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_elasticsearch_kibana_9200_9300_5601",
+    "CheckTitle": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Elasticsearch/Kibana ports.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Security group default (sg-0c5fc65165567f9fc) does not have Elasticsearch/Kibana ports 9200, 9300 and 5601 open to the Internet.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "default",
+    "Description": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Elasticsearch/Kibana ports.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "sg-0c5fc65165567f9fc",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:security-group/sg-0c5fc65165567f9fc",
+    "ResourceTags": {
+        "Name": "Default Security Group (do not use)",
+        "Project": "Network Hardened",
+        "Environment": "Development"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_elasticsearch_kibana_9200_9300_5601-850960379897-ap-southeast-1-sg-0b6a1a57fb0b393e0",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_elasticsearch_kibana_9200_9300_5601",
+    "CheckTitle": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Elasticsearch/Kibana ports.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Security group terraform-20250924034142150400000002 (sg-0b6a1a57fb0b393e0) does not have Elasticsearch/Kibana ports 9200, 9300 and 5601 open to the Internet.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "terraform-20250924034142150400000002",
+    "Description": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Elasticsearch/Kibana ports.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "sg-0b6a1a57fb0b393e0",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:security-group/sg-0b6a1a57fb0b393e0",
+    "ResourceTags": {
+        "Name": "Security Group Main",
+        "Environment": "Development",
+        "Project": "Network Hardened"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_kafka_9092-850960379897-ap-southeast-1-sg-0c5fc65165567f9fc",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_kafka_9092",
+    "CheckTitle": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Kafka port 9092.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Security group default (sg-0c5fc65165567f9fc) does not have Kafka port 9092 open to the Internet.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "default",
+    "Description": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Kafka port 9092.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "sg-0c5fc65165567f9fc",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:security-group/sg-0c5fc65165567f9fc",
+    "ResourceTags": {
+        "Name": "Default Security Group (do not use)",
+        "Project": "Network Hardened",
+        "Environment": "Development"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_kafka_9092-850960379897-ap-southeast-1-sg-0b6a1a57fb0b393e0",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_kafka_9092",
+    "CheckTitle": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Kafka port 9092.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Security group terraform-20250924034142150400000002 (sg-0b6a1a57fb0b393e0) does not have Kafka port 9092 open to the Internet.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "terraform-20250924034142150400000002",
+    "Description": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Kafka port 9092.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "sg-0b6a1a57fb0b393e0",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:security-group/sg-0b6a1a57fb0b393e0",
+    "ResourceTags": {
+        "Name": "Security Group Main",
+        "Environment": "Development",
+        "Project": "Network Hardened"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_memcached_11211-850960379897-ap-southeast-1-sg-0c5fc65165567f9fc",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_memcached_11211",
+    "CheckTitle": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Memcached port 11211.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Security group default (sg-0c5fc65165567f9fc) does not have Memcached port 11211 open to the Internet.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "default",
+    "Description": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Memcached port 11211.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "sg-0c5fc65165567f9fc",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:security-group/sg-0c5fc65165567f9fc",
+    "ResourceTags": {
+        "Name": "Default Security Group (do not use)",
+        "Project": "Network Hardened",
+        "Environment": "Development"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_memcached_11211-850960379897-ap-southeast-1-sg-0b6a1a57fb0b393e0",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_memcached_11211",
+    "CheckTitle": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Memcached port 11211.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Security group terraform-20250924034142150400000002 (sg-0b6a1a57fb0b393e0) does not have Memcached port 11211 open to the Internet.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "terraform-20250924034142150400000002",
+    "Description": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Memcached port 11211.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "sg-0b6a1a57fb0b393e0",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:security-group/sg-0b6a1a57fb0b393e0",
+    "ResourceTags": {
+        "Name": "Security Group Main",
+        "Environment": "Development",
+        "Project": "Network Hardened"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_mysql_3306-850960379897-ap-southeast-1-sg-0c5fc65165567f9fc",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_mysql_3306",
+    "CheckTitle": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to MySQL port 3306.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroups",
+    "Status": "PASS",
+    "StatusExtended": "Security group default (sg-0c5fc65165567f9fc) does not have MySQL port 3306 open to the Internet.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "default",
+    "Description": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to MySQL port 3306.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "sg-0c5fc65165567f9fc",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:security-group/sg-0c5fc65165567f9fc",
+    "ResourceTags": {
+        "Name": "Default Security Group (do not use)",
+        "Project": "Network Hardened",
+        "Environment": "Development"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_mysql_3306-850960379897-ap-southeast-1-sg-0b6a1a57fb0b393e0",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_mysql_3306",
+    "CheckTitle": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to MySQL port 3306.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroups",
+    "Status": "PASS",
+    "StatusExtended": "Security group terraform-20250924034142150400000002 (sg-0b6a1a57fb0b393e0) does not have MySQL port 3306 open to the Internet.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "terraform-20250924034142150400000002",
+    "Description": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to MySQL port 3306.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "sg-0b6a1a57fb0b393e0",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:security-group/sg-0b6a1a57fb0b393e0",
+    "ResourceTags": {
+        "Name": "Security Group Main",
+        "Environment": "Development",
+        "Project": "Network Hardened"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_oracle_1521_2483-850960379897-ap-southeast-1-sg-0c5fc65165567f9fc",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_oracle_1521_2483",
+    "CheckTitle": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Oracle ports 1521 or 2483.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Security group default (sg-0c5fc65165567f9fc) does not have Oracle ports 1521 and 2483 open to the Internet.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "default",
+    "Description": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Oracle ports 1521 or 2483.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "sg-0c5fc65165567f9fc",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:security-group/sg-0c5fc65165567f9fc",
+    "ResourceTags": {
+        "Name": "Default Security Group (do not use)",
+        "Project": "Network Hardened",
+        "Environment": "Development"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_oracle_1521_2483-850960379897-ap-southeast-1-sg-0b6a1a57fb0b393e0",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_oracle_1521_2483",
+    "CheckTitle": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Oracle ports 1521 or 2483.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Security group terraform-20250924034142150400000002 (sg-0b6a1a57fb0b393e0) does not have Oracle ports 1521 and 2483 open to the Internet.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "terraform-20250924034142150400000002",
+    "Description": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Oracle ports 1521 or 2483.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "sg-0b6a1a57fb0b393e0",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:security-group/sg-0b6a1a57fb0b393e0",
+    "ResourceTags": {
+        "Name": "Security Group Main",
+        "Environment": "Development",
+        "Project": "Network Hardened"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_postgres_5432-850960379897-ap-southeast-1-sg-0c5fc65165567f9fc",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_postgres_5432",
+    "CheckTitle": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Postgres port 5432.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Security group default (sg-0c5fc65165567f9fc) does not have Postgres port 5432 open to the Internet.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "default",
+    "Description": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Postgres port 5432.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "sg-0c5fc65165567f9fc",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:security-group/sg-0c5fc65165567f9fc",
+    "ResourceTags": {
+        "Name": "Default Security Group (do not use)",
+        "Project": "Network Hardened",
+        "Environment": "Development"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_postgres_5432-850960379897-ap-southeast-1-sg-0b6a1a57fb0b393e0",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_postgres_5432",
+    "CheckTitle": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Postgres port 5432.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Security group terraform-20250924034142150400000002 (sg-0b6a1a57fb0b393e0) does not have Postgres port 5432 open to the Internet.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "terraform-20250924034142150400000002",
+    "Description": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Postgres port 5432.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "sg-0b6a1a57fb0b393e0",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:security-group/sg-0b6a1a57fb0b393e0",
+    "ResourceTags": {
+        "Name": "Security Group Main",
+        "Environment": "Development",
+        "Project": "Network Hardened"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_redis_6379-850960379897-ap-southeast-1-sg-0c5fc65165567f9fc",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_redis_6379",
+    "CheckTitle": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Redis port 6379.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Security group default (sg-0c5fc65165567f9fc) does not have Redis port 6379 open to the Internet.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "default",
+    "Description": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Redis port 6379.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "sg-0c5fc65165567f9fc",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:security-group/sg-0c5fc65165567f9fc",
+    "ResourceTags": {
+        "Name": "Default Security Group (do not use)",
+        "Project": "Network Hardened",
+        "Environment": "Development"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_redis_6379-850960379897-ap-southeast-1-sg-0b6a1a57fb0b393e0",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_redis_6379",
+    "CheckTitle": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Redis port 6379.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Security group terraform-20250924034142150400000002 (sg-0b6a1a57fb0b393e0) does not have Redis port 6379 open to the Internet.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "terraform-20250924034142150400000002",
+    "Description": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Redis port 6379.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "sg-0b6a1a57fb0b393e0",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:security-group/sg-0b6a1a57fb0b393e0",
+    "ResourceTags": {
+        "Name": "Security Group Main",
+        "Environment": "Development",
+        "Project": "Network Hardened"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_sql_server_1433_1434-850960379897-ap-southeast-1-sg-0c5fc65165567f9fc",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_sql_server_1433_1434",
+    "CheckTitle": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Windows SQL Server ports 1433 or 1434.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Security group default (sg-0c5fc65165567f9fc) does not have Microsoft SQL Server ports 1433 and 1434 open to the Internet.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "default",
+    "Description": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Windows SQL Server ports 1433 or 1434.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "sg-0c5fc65165567f9fc",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:security-group/sg-0c5fc65165567f9fc",
+    "ResourceTags": {
+        "Name": "Default Security Group (do not use)",
+        "Project": "Network Hardened",
+        "Environment": "Development"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_sql_server_1433_1434-850960379897-ap-southeast-1-sg-0b6a1a57fb0b393e0",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_sql_server_1433_1434",
+    "CheckTitle": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Windows SQL Server ports 1433 or 1434.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Security group terraform-20250924034142150400000002 (sg-0b6a1a57fb0b393e0) does not have Microsoft SQL Server ports 1433 and 1434 open to the Internet.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "terraform-20250924034142150400000002",
+    "Description": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Windows SQL Server ports 1433 or 1434.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "sg-0b6a1a57fb0b393e0",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:security-group/sg-0b6a1a57fb0b393e0",
+    "ResourceTags": {
+        "Name": "Security Group Main",
+        "Environment": "Development",
+        "Project": "Network Hardened"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_telnet_23-850960379897-ap-southeast-1-sg-0c5fc65165567f9fc",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_telnet_23",
+    "CheckTitle": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Telnet port 23.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Security group default (sg-0c5fc65165567f9fc) does not have Telnet port 23 open to the Internet.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "default",
+    "Description": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Telnet port 23.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "sg-0c5fc65165567f9fc",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:security-group/sg-0c5fc65165567f9fc",
+    "ResourceTags": {
+        "Name": "Default Security Group (do not use)",
+        "Project": "Network Hardened",
+        "Environment": "Development"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_telnet_23-850960379897-ap-southeast-1-sg-0b6a1a57fb0b393e0",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_telnet_23",
+    "CheckTitle": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Telnet port 23.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Security group terraform-20250924034142150400000002 (sg-0b6a1a57fb0b393e0) does not have Telnet port 23 open to the Internet.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "terraform-20250924034142150400000002",
+    "Description": "Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to Telnet port 23.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "sg-0b6a1a57fb0b393e0",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:security-group/sg-0b6a1a57fb0b393e0",
+    "ResourceTags": {
+        "Name": "Security Group Main",
+        "Environment": "Development",
+        "Project": "Network Hardened"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_wide_open_public_ipv4-850960379897-ap-southeast-1-sg-0c5fc65165567f9fc",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_allow_wide_open_public_ipv4",
+    "CheckTitle": "Ensure no security groups allow ingress from wide-open non-RFC1918 address.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Security group default (sg-0c5fc65165567f9fc) has no potential wide-open non-RFC1918 address.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "default",
+    "Description": "Ensure no security groups allow ingress from wide-open non-RFC1918 address.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC03-BP07"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "sg-0c5fc65165567f9fc",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:security-group/sg-0c5fc65165567f9fc",
+    "ResourceTags": {
+        "Name": "Default Security Group (do not use)",
+        "Project": "Network Hardened",
+        "Environment": "Development"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_wide_open_public_ipv4-850960379897-ap-southeast-1-sg-0b6a1a57fb0b393e0",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_allow_wide_open_public_ipv4",
+    "CheckTitle": "Ensure no security groups allow ingress from wide-open non-RFC1918 address.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Security group terraform-20250924034142150400000002 (sg-0b6a1a57fb0b393e0) has no potential wide-open non-RFC1918 address.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "terraform-20250924034142150400000002",
+    "Description": "Ensure no security groups allow ingress from wide-open non-RFC1918 address.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC03-BP07"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "sg-0b6a1a57fb0b393e0",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:security-group/sg-0b6a1a57fb0b393e0",
+    "ResourceTags": {
+        "Name": "Security Group Main",
+        "Environment": "Development",
+        "Project": "Network Hardened"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_default_restrict_traffic-850960379897-ap-southeast-1-sg-0c5fc65165567f9fc",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_default_restrict_traffic",
+    "CheckTitle": "Ensure the default security group of every VPC restricts all traffic.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Default Security Group (sg-0c5fc65165567f9fc) rules do not allow traffic.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "default",
+    "Description": "Ensure the default security group of every VPC restricts all traffic.",
+    "Risk": "Even having a perimeter firewall, having security groups open allows any user or malware with vpc access to scan for well known and sensitive ports and gain access to instance.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "https://docs.bridgecrew.io/docs/networking_4#terraform",
+            "CLI": "",
+            "Other": "https://docs.bridgecrew.io/docs/networking_4#aws-console"
+        },
+        "Recommendation": {
+            "Text": "Apply Zero Trust approach. Implement a process to scan and remediate unrestricted or overly permissive security groups. Recommended best practices is to narrow the definition for the minimum ports required.",
+            "Url": "https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html"
+        }
+    },
+    "Compliance": {
+        "CISA": [
+            "your-systems-3",
+            "your-data-2"
+        ],
+        "CIS-1.4": [
+            "5.3"
+        ],
+        "CIS-1.5": [
+            "5.4"
+        ],
+        "AWS-Foundational-Security-Best-Practices": [
+            "ec2"
+        ],
+        "ISO27001-2013": [
+            "A.12.6",
+            "A.13.1"
+        ],
+        "CIS-2.0": [
+            "5.4"
+        ],
+        "GxP-21-CFR-Part-11": [
+            "11.10-d",
+            "11.10-g",
+            "11.10-k"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ],
+        "NIST-800-171-Revision-2": [
+            "3_1_1",
+            "3_1_2",
+            "3_1_3",
+            "3_1_14",
+            "3_1_20",
+            "3_4_6",
+            "3_4_7",
+            "3_13_2",
+            "3_13_5"
+        ],
+        "NIST-800-53-Revision-4": [
+            "ac_4",
+            "sc_7_3",
+            "sc_7"
+        ],
+        "NIST-800-53-Revision-5": [
+            "ac_4_21",
+            "ac_17_b",
+            "ac_17_1",
+            "ac_17_4_a",
+            "ac_17_9",
+            "ac_17_10",
+            "cm_6_a",
+            "cm_9_b",
+            "sc_7_5",
+            "sc_7_7",
+            "sc_7_11",
+            "sc_7_12",
+            "sc_7_16",
+            "sc_7_21",
+            "sc_7_24_b",
+            "sc_7_25",
+            "sc_7_26",
+            "sc_7_27",
+            "sc_7_28",
+            "sc_7_a",
+            "sc_7_c"
+        ],
+        "ENS-RD2022": [
+            "mp.com.1.aws.sg.1"
+        ],
+        "NIST-CSF-1.1": [
+            "ae_1",
+            "ac_3",
+            "ac_5"
+        ],
+        "RBI-Cyber-Security-Framework": [
+            "annex_i_5_1"
+        ],
+        "FFIEC": [
+            "d3-pc-im-b-1",
+            "d3-pc-im-b-2",
+            "d3-pc-im-b-6",
+            "d4-c-co-b-2"
+        ],
+        "PCI-3.2.1": [
+            "ec2"
+        ],
+        "FedRamp-Moderate-Revision-4": [
+            "ac-4",
+            "ac-17-1",
+            "ac-21-b",
+            "cm-2",
+            "sc-4",
+            "sc-7-3",
+            "sc-7"
+        ],
+        "FedRAMP-Low-Revision-4": [
+            "ac-17",
+            "cm-2",
+            "sc-7"
+        ]
+    },
+    "Categories": [],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "sg-0c5fc65165567f9fc",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:security-group/sg-0c5fc65165567f9fc",
+    "ResourceTags": {
+        "Name": "Default Security Group (do not use)",
+        "Project": "Network Hardened",
+        "Environment": "Development"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_from_launch_wizard-850960379897-ap-southeast-1-sg-0c5fc65165567f9fc",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_from_launch_wizard",
+    "CheckTitle": "Security Groups created by EC2 Launch Wizard.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Security group default (sg-0c5fc65165567f9fc) was not created using the EC2 Launch Wizard.",
+    "Severity": "medium",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "default",
+    "Description": "Security Groups created by EC2 Launch Wizard.",
+    "Risk": "Security Groups Created on the AWS Console using the EC2 wizard may allow port 22 from 0.0.0.0/0.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": "https://www.trendmicro.com/cloudoneconformity/knowledge-base/aws/EC2/security-group-prefixed-with-launch-wizard.html"
+        },
+        "Recommendation": {
+            "Text": "Apply Zero Trust approach. Implement a process to scan and remediate security groups created by the EC2 Wizard. Recommended best practices is to use an authorized security group.",
+            "Url": "https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html"
+        }
+    },
+    "Compliance": {
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ],
+        "ENS-RD2022": [
+            "mp.com.1.aws.sg.1"
+        ]
+    },
+    "Categories": [],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "sg-0c5fc65165567f9fc",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:security-group/sg-0c5fc65165567f9fc",
+    "ResourceTags": {
+        "Name": "Default Security Group (do not use)",
+        "Project": "Network Hardened",
+        "Environment": "Development"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_from_launch_wizard-850960379897-ap-southeast-1-sg-0b6a1a57fb0b393e0",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_from_launch_wizard",
+    "CheckTitle": "Security Groups created by EC2 Launch Wizard.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Security group terraform-20250924034142150400000002 (sg-0b6a1a57fb0b393e0) was not created using the EC2 Launch Wizard.",
+    "Severity": "medium",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "terraform-20250924034142150400000002",
+    "Description": "Security Groups created by EC2 Launch Wizard.",
+    "Risk": "Security Groups Created on the AWS Console using the EC2 wizard may allow port 22 from 0.0.0.0/0.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": "https://www.trendmicro.com/cloudoneconformity/knowledge-base/aws/EC2/security-group-prefixed-with-launch-wizard.html"
+        },
+        "Recommendation": {
+            "Text": "Apply Zero Trust approach. Implement a process to scan and remediate security groups created by the EC2 Wizard. Recommended best practices is to use an authorized security group.",
+            "Url": "https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html"
+        }
+    },
+    "Compliance": {
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ],
+        "ENS-RD2022": [
+            "mp.com.1.aws.sg.1"
+        ]
+    },
+    "Categories": [],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "sg-0b6a1a57fb0b393e0",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:security-group/sg-0b6a1a57fb0b393e0",
+    "ResourceTags": {
+        "Name": "Security Group Main",
+        "Environment": "Development",
+        "Project": "Network Hardened"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_not_used-850960379897-ap-southeast-1-sg-0b6a1a57fb0b393e0",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_not_used",
+    "CheckTitle": "Ensure there are no Security Groups not being used.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Security group terraform-20250924034142150400000002 (sg-0b6a1a57fb0b393e0) it is being used.",
+    "Severity": "low",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "terraform-20250924034142150400000002",
+    "Description": "Ensure there are no Security Groups not being used.",
+    "Risk": "Having clear definition and scope for Security Groups creates a better administration environment.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "List all the security groups and then use the cli to check if they are attached to an instance.",
+            "Url": "https://aws.amazon.com/premiumsupport/knowledge-center/ec2-find-security-group-resources/"
+        }
+    },
+    "Compliance": {
+        "AWS-Foundational-Security-Best-Practices": [
+            "ec2"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ],
+        "ENS-RD2022": [
+            "mp.com.1.aws.sg.3"
+        ]
+    },
+    "Categories": [],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "sg-0b6a1a57fb0b393e0",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:security-group/sg-0b6a1a57fb0b393e0",
+    "ResourceTags": {
+        "Name": "Security Group Main",
+        "Environment": "Development",
+        "Project": "Network Hardened"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_with_many_ingress_egress_rules-850960379897-ap-southeast-1-sg-0c5fc65165567f9fc",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_with_many_ingress_egress_rules",
+    "CheckTitle": "Find security groups with more than 50 ingress or egress rules.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Security group default (sg-0c5fc65165567f9fc) has 0 inbound rules and 0 outbound rules.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "default",
+    "Description": "Find security groups with more than 50 ingress or egress rules.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ]
+    },
+    "Categories": [],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "sg-0c5fc65165567f9fc",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:security-group/sg-0c5fc65165567f9fc",
+    "ResourceTags": {
+        "Name": "Default Security Group (do not use)",
+        "Project": "Network Hardened",
+        "Environment": "Development"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-ec2_securitygroup_with_many_ingress_egress_rules-850960379897-ap-southeast-1-sg-0b6a1a57fb0b393e0",
+    "Provider": "aws",
+    "CheckID": "ec2_securitygroup_with_many_ingress_egress_rules",
+    "CheckTitle": "Find security groups with more than 50 ingress or egress rules.",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "securitygroup",
+    "Status": "PASS",
+    "StatusExtended": "Security group terraform-20250924034142150400000002 (sg-0b6a1a57fb0b393e0) has 2 inbound rules and 1 outbound rules.",
+    "Severity": "high",
+    "ResourceType": "AwsEc2SecurityGroup",
+    "ResourceDetails": "terraform-20250924034142150400000002",
+    "Description": "Find security groups with more than 50 ingress or egress rules.",
+    "Risk": "If Security groups are not properly configured the attack surface is increased.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Use a Zero Trust approach. Narrow ingress traffic as much as possible. Consider north-south as well as east-west traffic.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html"
+        }
+    },
+    "Compliance": {
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ]
+    },
+    "Categories": [],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "sg-0b6a1a57fb0b393e0",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:security-group/sg-0b6a1a57fb0b393e0",
+    "ResourceTags": {
+        "Name": "Security Group Main",
+        "Environment": "Development",
+        "Project": "Network Hardened"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-vpc_different_regions-850960379897-ap-southeast-1-850960379897",
+    "Provider": "aws",
+    "CheckID": "vpc_different_regions",
+    "CheckTitle": "Ensure there are VPCs in more than one region",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "vpc",
+    "SubServiceName": "subnet",
+    "Status": "FAIL",
+    "StatusExtended": "VPCs found only in one region.",
+    "Severity": "medium",
+    "ResourceType": "AwsEc2Vpc",
+    "ResourceDetails": "",
+    "Description": "Ensure there are VPCs in more than one region",
+    "Risk": "",
+    "RelatedUrl": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Scenario2.html",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "aws ec2 create-vpc",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Ensure there are VPCs in more than one region",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-example-private-subnets-nat.html"
+        }
+    },
+    "Compliance": {},
+    "Categories": [],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "850960379897",
+    "ResourceArn": "arn:aws:iam::850960379897:root",
+    "ResourceTags": {}
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-vpc_flow_logs_enabled-850960379897-ap-southeast-1-vpc-0773d65b3202ab18b",
+    "Provider": "aws",
+    "CheckID": "vpc_flow_logs_enabled",
+    "CheckTitle": "Ensure VPC Flow Logging is Enabled in all VPCs.",
+    "CheckType": [
+        "Logging and Monitoring"
+    ],
+    "ServiceName": "vpc",
+    "SubServiceName": "flow_log",
+    "Status": "FAIL",
+    "StatusExtended": "VPC VPC Main Flow logs are disabled.",
+    "Severity": "medium",
+    "ResourceType": "AwsEc2Vpc",
+    "ResourceDetails": "",
+    "Description": "Ensure VPC Flow Logging is Enabled in all VPCs.",
+    "Risk": "VPC Flow Logs provide visibility into network traffic that traverses the VPC and can be used to detect anomalous traffic or insight during security workflows.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "https://docs.bridgecrew.io/docs/logging_9-enable-vpc-flow-logging#terraform",
+            "CLI": "",
+            "Other": "https://docs.bridgecrew.io/docs/logging_9-enable-vpc-flow-logging#aws-console"
+        },
+        "Recommendation": {
+            "Text": "It is recommended that VPC Flow Logs be enabled for packet Rejects for VPCs.",
+            "Url": "http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/flow-logs.html"
+        }
+    },
+    "Compliance": {
+        "CISA": [
+            "your_-urroundings-1",
+            "your-data-2"
+        ],
+        "SOC2": [
+            "cc_7_2",
+            "cc_7_3"
+        ],
+        "CIS-1.4": [
+            "3.9"
+        ],
+        "CIS-1.5": [
+            "3.9"
+        ],
+        "GDPR": [
+            "article_25",
+            "article_30"
+        ],
+        "AWS-Foundational-Security-Best-Practices": [
+            "ec2"
+        ],
+        "ISO27001-2013": [
+            "A.12.4"
+        ],
+        "HIPAA": [
+            "164_308_a_1_ii_d",
+            "164_308_a_3_ii_a",
+            "164_308_a_6_ii",
+            "164_312_b",
+            "164_312_c_2"
+        ],
+        "CIS-2.0": [
+            "3.9"
+        ],
+        "GxP-21-CFR-Part-11": [
+            "11.10-e"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC04-BP01",
+            "SEC04-BP02",
+            "SEC04-BP03",
+            "SEC05-BP04",
+            "SEC09-BP04"
+        ],
+        "NIST-800-171-Revision-2": [
+            "3_3_1",
+            "3_3_3",
+            "3_6_1",
+            "3_6_2",
+            "3_13_1",
+            "3_14_6",
+            "3_14_7"
+        ],
+        "NIST-800-53-Revision-4": [
+            "au_2",
+            "au_3",
+            "au_12"
+        ],
+        "NIST-800-53-Revision-5": [
+            "ac_4_26",
+            "au_2_b",
+            "au_3_a",
+            "au_3_b",
+            "au_3_c",
+            "au_3_d",
+            "au_3_e",
+            "au_6_3",
+            "au_6_4",
+            "au_6_6",
+            "au_6_9",
+            "au_8_b",
+            "au_12_a",
+            "au_12_c",
+            "au_12_1",
+            "au_12_2",
+            "au_12_3",
+            "au_12_4",
+            "au_14_a",
+            "au_14_b",
+            "au_14_3",
+            "ca_7_b",
+            "cm_5_1_b",
+            "cm_6_a",
+            "cm_9_b",
+            "ia_3_3_b",
+            "ma_4_1_a",
+            "pm_14_a_1",
+            "pm_14_b",
+            "pm_31",
+            "si_4_17",
+            "si_7_8"
+        ],
+        "ENS-RD2022": [
+            "op.mon.1.aws.flow.1"
+        ],
+        "NIST-CSF-1.1": [
+            "ae_1",
+            "ae_3",
+            "cm_1",
+            "cm_7",
+            "am_3",
+            "ds_5",
+            "pt_1"
+        ],
+        "RBI-Cyber-Security-Framework": [
+            "annex_i_7_4"
+        ],
+        "FFIEC": [
+            "d2-ma-ma-b-1",
+            "d2-ma-ma-b-2",
+            "d3-dc-an-b-3",
+            "d3-dc-an-b-4",
+            "d3-dc-ev-b-1",
+            "d3-dc-ev-b-3",
+            "d3-pc-im-b-3"
+        ],
+        "PCI-3.2.1": [
+            "ec2"
+        ],
+        "FedRamp-Moderate-Revision-4": [
+            "au-2-a-d",
+            "au-3",
+            "au-6-1-3",
+            "au-12-a-c"
+        ],
+        "FedRAMP-Low-Revision-4": [
+            "au-2"
+        ]
+    },
+    "Categories": [
+        "forensics-ready"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "vpc-0773d65b3202ab18b",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:vpc/vpc-0773d65b3202ab18b",
+    "ResourceTags": {
+        "Project": "Network Hardened",
+        "Environment": "Development",
+        "Name": "VPC Main"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-vpc_subnet_different_az-850960379897-ap-southeast-1-vpc-0773d65b3202ab18b",
+    "Provider": "aws",
+    "CheckID": "vpc_subnet_different_az",
+    "CheckTitle": "Ensure all VPC has subnets in more than one availability zone",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "vpc",
+    "SubServiceName": "subnet",
+    "Status": "FAIL",
+    "StatusExtended": "VPC VPC Main has only subnets in ap-southeast-1a.",
+    "Severity": "medium",
+    "ResourceType": "AwsEc2Vpc",
+    "ResourceDetails": "",
+    "Description": "Ensure all VPC has subnets in more than one availability zone",
+    "Risk": "",
+    "RelatedUrl": "https://docs.aws.amazon.com/vpc/latest/userguide/configure-subnets.html",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "aws ec2 create-subnet",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Ensure all VPC has subnets in more than one availability zone",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/configure-subnets.html"
+        }
+    },
+    "Compliance": {
+        "ENS-RD2022": [
+            "mp.com.4.r3.aws.vpc.1"
+        ]
+    },
+    "Categories": [],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "vpc-0773d65b3202ab18b",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:vpc/vpc-0773d65b3202ab18b",
+    "ResourceTags": {
+        "Project": "Network Hardened",
+        "Environment": "Development",
+        "Name": "VPC Main"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-vpc_subnet_no_public_ip_by_default-850960379897-ap-southeast-1-subnet-04838fb39ff31b6ac",
+    "Provider": "aws",
+    "CheckID": "vpc_subnet_no_public_ip_by_default",
+    "CheckTitle": "Ensure VPC subnets do not assign public IP by default",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "vpc",
+    "SubServiceName": "subnet",
+    "Status": "PASS",
+    "StatusExtended": "VPC subnet Subnet Public Main does NOT assign public IP by default.",
+    "Severity": "medium",
+    "ResourceType": "AwsEc2Subnet",
+    "ResourceDetails": "",
+    "Description": "Ensure VPC subnets do not assign public IP by default",
+    "Risk": "VPC subnet is a part of the VPC having its own rules for traffic. Assigning the Public IP to the subnet automatically (on launch) can accidentally expose the instances within this subnet to internet and should be edited to 'No' post creation of the Subnet.",
+    "RelatedUrl": "https://docs.aws.amazon.com/config/latest/developerguide/subnet-auto-assign-public-ip-disabled.html",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "https://docs.bridgecrew.io/docs/ensure-vpc-subnets-do-not-assign-public-ip-by-default#terraform",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "VPC subnets should not allow automatic public IP assignment",
+            "Url": "https://docs.aws.amazon.com/config/latest/developerguide/subnet-auto-assign-public-ip-disabled.html"
+        }
+    },
+    "Compliance": {},
+    "Categories": [],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "subnet-04838fb39ff31b6ac",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:subnet/subnet-04838fb39ff31b6ac",
+    "ResourceTags": {
+        "Environment": "Development",
+        "Project": "Network Hardened",
+        "Name": "Subnet Public Main"
+    }
+},{
+    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "FindingUniqueId": "prowler-aws-vpc_subnet_separate_private_public-850960379897-ap-southeast-1-vpc-0773d65b3202ab18b",
+    "Provider": "aws",
+    "CheckID": "vpc_subnet_separate_private_public",
+    "CheckTitle": "Ensure all VPC has public and private subnets defined",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "vpc",
+    "SubServiceName": "subnet",
+    "Status": "FAIL",
+    "StatusExtended": "VPC VPC Main has only public subnets.",
+    "Severity": "medium",
+    "ResourceType": "AwsEc2Vpc",
+    "ResourceDetails": "",
+    "Description": "Ensure all VPC has public and private subnets defined",
+    "Risk": "",
+    "RelatedUrl": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Scenario2.html",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "aws ec2 create-subnet",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Ensure all VPC has public and private subnets defined",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Scenario2.html"
+        }
+    },
+    "Compliance": {
+        "ENS-RD2022": [
+            "mp.com.4.aws.vpc.1",
+            "mp.com.4.r1.aws.vpc.1"
+        ]
+    },
+    "Categories": [],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "vpc-0773d65b3202ab18b",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:vpc/vpc-0773d65b3202ab18b",
+    "ResourceTags": {
+        "Project": "Network Hardened",
+        "Environment": "Development",
+        "Name": "VPC Main"
+    }
+}]
