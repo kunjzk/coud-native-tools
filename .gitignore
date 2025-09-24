@@ -3,3 +3,4 @@ skopeo/docker-cli/.env
 *.tfstate
 *.tfstate.backup
 .terraform/
+*.pkg

@@ -6,7 +6,7 @@ locals {
 }
 
 # What we need:
-# 1. VPC
+# 1. VPC (remove rules from default security group)
 # 2. Subnet
 # 3. Internet Gateway
 # 4. Route Table
@@ -15,6 +15,7 @@ locals {
 # 7. Security Group & rules
 # 8. Elastic IP for EC2 Instance
 # 9. Tiny EC2 Instance
+# 10. SSM setup for EC2 instance - policy, role, instance profile, association
 
 provider "aws" {
   region = "ap-southeast-1"
@@ -87,16 +88,6 @@ resource "aws_security_group" "main" {
   })
 }
 
-# Security Group Rule - allow all SSH traffic
-resource "aws_security_group_rule" "ssh_ingress" {
-  security_group_id = aws_security_group.main.id
-  type = "ingress"
-  cidr_blocks = ["0.0.0.0/0"]
-  from_port = 22
-  to_port = 22
-  protocol = "tcp"
-}
-
 # Security Group Rule - allow all HTTPS traffic
 resource "aws_security_group_rule" "https_ingress" {
   security_group_id = aws_security_group.main.id
@@ -117,12 +108,34 @@ resource "aws_security_group_rule" "all_egress" {
   protocol = "-1"
 }
 
-# Elastic IP
-resource "aws_eip" "main" {
-  domain = "vpc"
-  tags = merge(local.tags, {
-    Name = "Elastic IP Main"
-  })
+# Trust policy: EC2 can assume this role
+data "aws_iam_policy_document" "ec2_trust" {
+  statement {
+    actions = ["sts:AssumeRole"]
+    principals {
+      type        = "Service"
+      identifiers = ["ec2.amazonaws.com"]
+    }
+  }
+}
+
+# Role for the instance
+resource "aws_iam_role" "ec2_ssm_role" {
+  name               = "ec2-ssm-role"
+  assume_role_policy = data.aws_iam_policy_document.ec2_trust.json
+}
+
+# Attach AWS-managed policy: AmazonSSMManagedInstanceCore
+resource "aws_iam_role_policy_attachment" "ssm_core" {
+  role       = aws_iam_role.ec2_ssm_role.name
+  policy_arn = "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
+}
+
+
+# Instance profile (binds role → EC2)
+resource "aws_iam_instance_profile" "ec2_ssm_profile" {
+  name = "ec2-ssm-instance-profile"
+  role = aws_iam_role.ec2_ssm_role.name
 }
 
 # Tiny EC2 Instance
@@ -131,9 +144,17 @@ resource "aws_instance" "main" {
   instance_type = "t3.micro"
   subnet_id = aws_subnet.public_main.id
   vpc_security_group_ids = [aws_security_group.main.id]
-  key_name = "For SSH"  # Key pair name from EC2 console
+  iam_instance_profile = aws_iam_instance_profile.ec2_ssm_profile.name
   tags = merge(local.tags, {
     Name = "Tiny EC2 Instance Main"
+  })
+}
+
+# Elastic IP
+resource "aws_eip" "main" {
+  domain = "vpc"
+  tags = merge(local.tags, {
+    Name = "Elastic IP Main"
   })
 }
 
@@ -145,11 +166,12 @@ resource "aws_eip_association" "main" {
 
 # Output the Elastic IP for SSH access
 output "elastic_ip" {
-  description = "Elastic IP address for SSH access to EC2 instance"
+  description = "Elastic IP of EC2 instance"
   value       = aws_eip.main.public_ip
 }
 
-output "ssh_command" {
-  description = "Command to SSH into the EC2 instance"
-  value       = "ssh -i ~/.ssh/aws-priv-key.pem ec2-user@${aws_eip.main.public_ip}"
+# Output instance ID for SSM access
+output "instance_id" {
+  description = "Instance ID of EC2 instance"
+  value       = aws_instance.main.id
 }
