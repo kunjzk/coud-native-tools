@@ -1,5 +1,5 @@
 [{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_ebs_default_encryption-850960379897-ap-southeast-1-850960379897",
     "Provider": "aws",
     "CheckID": "ec2_ebs_default_encryption",
@@ -91,7 +91,7 @@
     "ResourceArn": "arn:aws:iam::850960379897:root",
     "ResourceTags": {}
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_ebs_volume_encryption-850960379897-ap-southeast-1-vol-0315a657b59b02937",
     "Provider": "aws",
     "CheckID": "ec2_ebs_volume_encryption",
@@ -212,7 +212,7 @@
     "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:volume/vol-0315a657b59b02937",
     "ResourceTags": {}
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_ebs_volume_snapshots_exists-850960379897-ap-southeast-1-vol-0315a657b59b02937",
     "Provider": "aws",
     "CheckID": "ec2_ebs_volume_snapshots_exists",
@@ -257,7 +257,7 @@
     "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:volume/vol-0315a657b59b02937",
     "ResourceTags": {}
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_elastic_ip_unassigned-850960379897-ap-southeast-1-3.0.204.89",
     "Provider": "aws",
     "CheckID": "ec2_elastic_ip_unassigned",
@@ -324,54 +324,7 @@
         "Environment": "Development"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
-    "FindingUniqueId": "prowler-aws-ec2_instance_detailed_monitoring_enabled-850960379897-ap-southeast-1-i-049f3edfc0d598daa",
-    "Provider": "aws",
-    "CheckID": "ec2_instance_detailed_monitoring_enabled",
-    "CheckTitle": "Check if EC2 instances have detailed monitoring enabled.",
-    "CheckType": [
-        "Infrastructure Security"
-    ],
-    "ServiceName": "ec2",
-    "SubServiceName": "",
-    "Status": "FAIL",
-    "StatusExtended": "EC2 Instance i-049f3edfc0d598daa does not have detailed monitoring enabled.",
-    "Severity": "low",
-    "ResourceType": "AwsEc2Instance",
-    "ResourceDetails": "",
-    "Description": "Check if EC2 instances have detailed monitoring enabled.",
-    "Risk": "Enabling detailed monitoring provides enhanced monitoring and granular insights into EC2 instance metrics. Not having detailed monitoring enabled may limit the ability to troubleshoot performance issues effectively.",
-    "RelatedUrl": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-cloudwatch-new.html",
-    "Remediation": {
-        "Code": {
-            "NativeIaC": "https://www.trendmicro.com/cloudoneconformity/knowledge-base/aws/EC2/instance-detailed-monitoring.html",
-            "Terraform": "https://docs.bridgecrew.io/docs/ensure-that-detailed-monitoring-is-enabled-for-ec2-instances#terraform",
-            "CLI": "https://www.trendmicro.com/cloudoneconformity/knowledge-base/aws/EC2/instance-detailed-monitoring.html",
-            "Other": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-cloudwatch-new.html#enable-detailed-monitoring-instance"
-        },
-        "Recommendation": {
-            "Text": "Enable detailed monitoring for EC2 instances to gain better insights into performance metrics.",
-            "Url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-cloudwatch-new.html#enable-detailed-monitoring-instance"
-        }
-    },
-    "Compliance": {},
-    "Categories": [],
-    "DependsOn": [],
-    "RelatedTo": [],
-    "Notes": "",
-    "Profile": null,
-    "AccountId": "850960379897",
-    "OrganizationsInfo": null,
-    "Region": "ap-southeast-1",
-    "ResourceId": "i-049f3edfc0d598daa",
-    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:instance/i-049f3edfc0d598daa",
-    "ResourceTags": {
-        "Name": "Tiny EC2 Instance Main",
-        "Project": "Network Basic",
-        "Environment": "Development"
-    }
-},{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_instance_detailed_monitoring_enabled-850960379897-ap-southeast-1-i-00a3ae5c672f62596",
     "Provider": "aws",
     "CheckID": "ec2_instance_detailed_monitoring_enabled",
@@ -418,7 +371,7 @@
         "Environment": "Development"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_instance_imdsv2_enabled-850960379897-ap-southeast-1-i-00a3ae5c672f62596",
     "Provider": "aws",
     "CheckID": "ec2_instance_imdsv2_enabled",
@@ -546,7 +499,7 @@
         "Environment": "Development"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_instance_internet_facing_with_instance_profile-850960379897-ap-southeast-1-i-00a3ae5c672f62596",
     "Provider": "aws",
     "CheckID": "ec2_instance_internet_facing_with_instance_profile",
@@ -556,8 +509,8 @@
     ],
     "ServiceName": "ec2",
     "SubServiceName": "",
-    "Status": "PASS",
-    "StatusExtended": "EC2 Instance i-00a3ae5c672f62596 is not internet facing with an instance profile.",
+    "Status": "FAIL",
+    "StatusExtended": "EC2 Instance i-00a3ae5c672f62596 at IP 3.0.204.89 is internet-facing with Instance Profile arn:aws:iam::850960379897:instance-profile/ec2-ssm-instance-profile.",
     "Severity": "medium",
     "ResourceType": "AwsEc2Instance",
     "ResourceDetails": "",
@@ -602,7 +555,7 @@
         "Environment": "Development"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_instance_managed_by_ssm-850960379897-ap-southeast-1-i-00a3ae5c672f62596",
     "Provider": "aws",
     "CheckID": "ec2_instance_managed_by_ssm",
@@ -612,8 +565,8 @@
     ],
     "ServiceName": "ec2",
     "SubServiceName": "instance",
-    "Status": "FAIL",
-    "StatusExtended": "EC2 Instance i-00a3ae5c672f62596 is not managed by Systems Manager.",
+    "Status": "PASS",
+    "StatusExtended": "EC2 Instance i-00a3ae5c672f62596 is managed by Systems Manager.",
     "Severity": "medium",
     "ResourceType": "AwsEc2Instance",
     "ResourceDetails": "",
@@ -753,97 +706,7 @@
         "Environment": "Development"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
-    "FindingUniqueId": "prowler-aws-ec2_instance_older_than_specific_days-850960379897-ap-southeast-1-i-049f3edfc0d598daa",
-    "Provider": "aws",
-    "CheckID": "ec2_instance_older_than_specific_days",
-    "CheckTitle": "Check EC2 Instances older than specific days.",
-    "CheckType": [
-        "Infrastructure Security"
-    ],
-    "ServiceName": "ec2",
-    "SubServiceName": "",
-    "Status": "PASS",
-    "StatusExtended": "EC2 Instance i-049f3edfc0d598daa is not running.",
-    "Severity": "medium",
-    "ResourceType": "AwsEc2Instance",
-    "ResourceDetails": "",
-    "Description": "Check EC2 Instances older than specific days.",
-    "Risk": "Having old instances within your AWS account could increase the risk of having vulnerable software.",
-    "RelatedUrl": "",
-    "Remediation": {
-        "Code": {
-            "NativeIaC": "",
-            "Terraform": "",
-            "CLI": "",
-            "Other": "https://www.trendmicro.com/cloudoneconformity/knowledge-base/aws/EC2/ec2-instance-too-old.html"
-        },
-        "Recommendation": {
-            "Text": "Check if software running in the instance is up to date and patched accordingly. Use AWS Systems Manager to patch instances and view patching compliance information.",
-            "Url": "https://docs.aws.amazon.com/systems-manager/latest/userguide/viewing-patch-compliance-results.html"
-        }
-    },
-    "Compliance": {
-        "CISA": [
-            "your-systems-1"
-        ],
-        "AWS-Foundational-Security-Best-Practices": [
-            "ec2"
-        ],
-        "HIPAA": [
-            "164_308_a_1_ii_b"
-        ],
-        "GxP-21-CFR-Part-11": [
-            "11.10-a"
-        ],
-        "NIST-800-171-Revision-2": [
-            "3_4_1",
-            "3_4_2"
-        ],
-        "NIST-800-53-Revision-4": [
-            "cm_2"
-        ],
-        "NIST-800-53-Revision-5": [
-            "cm_2_a",
-            "cm_2_b",
-            "cm_2_b_1",
-            "cm_2_b_2",
-            "cm_2_b_3",
-            "cm_2_2",
-            "cm_3_3",
-            "cm_8_6"
-        ],
-        "NIST-CSF-1.1": [
-            "ds_7",
-            "ip_1"
-        ],
-        "FFIEC": [
-            "d1-g-it-b-1"
-        ],
-        "FedRamp-Moderate-Revision-4": [
-            "cm-2"
-        ],
-        "FedRAMP-Low-Revision-4": [
-            "cm-2"
-        ]
-    },
-    "Categories": [],
-    "DependsOn": [],
-    "RelatedTo": [],
-    "Notes": "",
-    "Profile": null,
-    "AccountId": "850960379897",
-    "OrganizationsInfo": null,
-    "Region": "ap-southeast-1",
-    "ResourceId": "i-049f3edfc0d598daa",
-    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:instance/i-049f3edfc0d598daa",
-    "ResourceTags": {
-        "Name": "Tiny EC2 Instance Main",
-        "Project": "Network Basic",
-        "Environment": "Development"
-    }
-},{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_instance_older_than_specific_days-850960379897-ap-southeast-1-i-00a3ae5c672f62596",
     "Provider": "aws",
     "CheckID": "ec2_instance_older_than_specific_days",
@@ -854,7 +717,7 @@
     "ServiceName": "ec2",
     "SubServiceName": "",
     "Status": "PASS",
-    "StatusExtended": "EC2 Instance i-00a3ae5c672f62596 is not older than 180 days (0 days).",
+    "StatusExtended": "EC2 Instance i-00a3ae5c672f62596 is not older than 180 days (1 days).",
     "Severity": "medium",
     "ResourceType": "AwsEc2Instance",
     "ResourceDetails": "",
@@ -933,7 +796,7 @@
         "Environment": "Development"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_instance_profile_attached-850960379897-ap-southeast-1-i-00a3ae5c672f62596",
     "Provider": "aws",
     "CheckID": "ec2_instance_profile_attached",
@@ -943,8 +806,8 @@
     ],
     "ServiceName": "ec2",
     "SubServiceName": "",
-    "Status": "FAIL",
-    "StatusExtended": "EC2 Instance i-00a3ae5c672f62596 not associated with an Instance Profile Role.",
+    "Status": "PASS",
+    "StatusExtended": "EC2 Instance i-00a3ae5c672f62596 associated with Instance Profile Role arn:aws:iam::850960379897:instance-profile/ec2-ssm-instance-profile.",
     "Severity": "medium",
     "ResourceType": "AwsEc2Instance",
     "ResourceDetails": "",
@@ -1012,7 +875,7 @@
         "Environment": "Development"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_instance_public_ip-850960379897-ap-southeast-1-i-00a3ae5c672f62596",
     "Provider": "aws",
     "CheckID": "ec2_instance_public_ip",
@@ -1160,7 +1023,7 @@
         "Environment": "Development"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_instance_secrets_user_data-850960379897-ap-southeast-1-i-00a3ae5c672f62596",
     "Provider": "aws",
     "CheckID": "ec2_instance_secrets_user_data",
@@ -1216,7 +1079,170 @@
         "Environment": "Development"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
+    "FindingUniqueId": "prowler-aws-ec2_networkacl_allow_ingress_any_port-850960379897-ap-southeast-1-acl-0202546dbdd11cb3b",
+    "Provider": "aws",
+    "CheckID": "ec2_networkacl_allow_ingress_any_port",
+    "CheckTitle": "Ensure no Network ACLs allow ingress from 0.0.0.0/0 to any port.",
+    "CheckType": [
+        "Software and Configuration Checks",
+        "Industry and Regulatory Standards",
+        "CIS AWS Foundations Benchmark"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "networkacl",
+    "Status": "PASS",
+    "StatusExtended": "Network ACL Web NACL does not have every port open to the Internet.",
+    "Severity": "medium",
+    "ResourceType": "AwsEc2NetworkAcl",
+    "ResourceDetails": "",
+    "Description": "Ensure no Network ACLs allow ingress from 0.0.0.0/0 to any port.",
+    "Risk": "Even having a perimeter firewall, having network acls open allows any user or malware with vpc access to scan for well known and sensitive ports and gain access to instance.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "",
+            "Terraform": "",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Apply Zero Trust approach. Implement a process to scan and remediate unrestricted or overly permissive network acls. Recommended best practices is to narrow the definition for the minimum ports required.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html"
+        }
+    },
+    "Compliance": {
+        "CISA": [
+            "your-data-2"
+        ],
+        "CIS-1.4": [
+            "5.1"
+        ],
+        "CIS-1.5": [
+            "5.1"
+        ],
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "AWS-Foundational-Security-Best-Practices": [
+            "ec2"
+        ],
+        "HIPAA": [
+            "164_308_a_1_ii_b",
+            "164_312_e_1"
+        ],
+        "CIS-2.0": [
+            "5.1"
+        ],
+        "GxP-21-CFR-Part-11": [
+            "11.10-d",
+            "11.10-g",
+            "11.10-k"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ],
+        "NIST-800-171-Revision-2": [
+            "3_1_1",
+            "3_1_2",
+            "3_1_3",
+            "3_1_14",
+            "3_1_20",
+            "3_4_1",
+            "3_4_7",
+            "3_13_1",
+            "3_13_2",
+            "3_13_5",
+            "3_13_6"
+        ],
+        "NIST-800-53-Revision-4": [
+            "ac_4",
+            "cm_2",
+            "sc_7_3",
+            "sc_7"
+        ],
+        "NIST-800-53-Revision-5": [
+            "ac_4_21",
+            "ac_17_b",
+            "ac_17_1",
+            "ac_17_4_a",
+            "ac_17_9",
+            "ac_17_10",
+            "cm_2_a",
+            "cm_2_2",
+            "cm_6_a",
+            "cm_7_b",
+            "cm_8_6",
+            "cm_9_b",
+            "sc_7_5",
+            "sc_7_7",
+            "sc_7_11",
+            "sc_7_12",
+            "sc_7_16",
+            "sc_7_21",
+            "sc_7_24_b",
+            "sc_7_25",
+            "sc_7_26",
+            "sc_7_27",
+            "sc_7_28",
+            "sc_7_a",
+            "sc_7_c"
+        ],
+        "NIST-CSF-1.1": [
+            "ae_1",
+            "ac_3",
+            "ac_5",
+            "pt_4"
+        ],
+        "RBI-Cyber-Security-Framework": [
+            "annex_i_1_3",
+            "annex_i_5_1"
+        ],
+        "FFIEC": [
+            "d3-pc-am-b-10",
+            "d3-pc-im-b-1",
+            "d3-pc-im-b-2",
+            "d3-pc-im-b-6",
+            "d4-c-co-b-2"
+        ],
+        "FedRamp-Moderate-Revision-4": [
+            "ac-4",
+            "ac-17-1",
+            "ac-21-b",
+            "cm-2",
+            "sc-4",
+            "sc-7-3",
+            "sc-7"
+        ],
+        "FedRAMP-Low-Revision-4": [
+            "ac-17",
+            "cm-2",
+            "sc-7"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "Infrastructure Security",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "acl-0202546dbdd11cb3b",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:network-acl/acl-0202546dbdd11cb3b",
+    "ResourceTags": {
+        "Environment": "Development",
+        "Project": "Network Hardened",
+        "Name": "Web NACL"
+    }
+},{
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_networkacl_allow_ingress_any_port-850960379897-ap-southeast-1-acl-0607a8ae41e75fc27",
     "Provider": "aws",
     "CheckID": "ec2_networkacl_allow_ingress_any_port",
@@ -1228,8 +1254,8 @@
     ],
     "ServiceName": "ec2",
     "SubServiceName": "networkacl",
-    "Status": "FAIL",
-    "StatusExtended": "Network ACL acl-0607a8ae41e75fc27 has every port open to the Internet.",
+    "Status": "PASS",
+    "StatusExtended": "Network ACL Default NACL (DO NOT USE, deny all traffic) does not have every port open to the Internet.",
     "Severity": "medium",
     "ResourceType": "AwsEc2NetworkAcl",
     "ResourceDetails": "",
@@ -1373,9 +1399,83 @@
     "Region": "ap-southeast-1",
     "ResourceId": "acl-0607a8ae41e75fc27",
     "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:network-acl/acl-0607a8ae41e75fc27",
-    "ResourceTags": {}
+    "ResourceTags": {
+        "Environment": "Development",
+        "Name": "Default NACL (DO NOT USE, deny all traffic)",
+        "Project": "Network Hardened"
+    }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
+    "FindingUniqueId": "prowler-aws-ec2_networkacl_allow_ingress_tcp_port_22-850960379897-ap-southeast-1-acl-0202546dbdd11cb3b",
+    "Provider": "aws",
+    "CheckID": "ec2_networkacl_allow_ingress_tcp_port_22",
+    "CheckTitle": "Ensure no Network ACLs allow ingress from 0.0.0.0/0 to SSH port 22",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "networkacl",
+    "Status": "PASS",
+    "StatusExtended": "Network ACL Web NACL does not have SSH port 22 open to the Internet.",
+    "Severity": "medium",
+    "ResourceType": "AwsEc2NetworkAcl",
+    "ResourceDetails": "",
+    "Description": "Ensure no Network ACLs allow ingress from 0.0.0.0/0 to SSH port 22",
+    "Risk": "Even having a perimeter firewall, having network acls open allows any user or malware with vpc access to scan for well known and sensitive ports and gain access to instance.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "https://docs.bridgecrew.io/docs/ensure-aws-nacl-does-not-allow-ingress-from-00000-to-port-22#cloudformation",
+            "Terraform": "https://docs.bridgecrew.io/docs/ensure-aws-nacl-does-not-allow-ingress-from-00000-to-port-22#terraform",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Apply Zero Trust approach. Implement a process to scan and remediate unrestricted or overly permissive network acls. Recommended best practices is to narrow the definition for the minimum ports required.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html"
+        }
+    },
+    "Compliance": {
+        "CIS-1.4": [
+            "5.1"
+        ],
+        "CIS-1.5": [
+            "5.1"
+        ],
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "CIS-2.0": [
+            "5.1"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP02",
+            "SEC05-BP03"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "acl-0202546dbdd11cb3b",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:network-acl/acl-0202546dbdd11cb3b",
+    "ResourceTags": {
+        "Environment": "Development",
+        "Project": "Network Hardened",
+        "Name": "Web NACL"
+    }
+},{
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_networkacl_allow_ingress_tcp_port_22-850960379897-ap-southeast-1-acl-0607a8ae41e75fc27",
     "Provider": "aws",
     "CheckID": "ec2_networkacl_allow_ingress_tcp_port_22",
@@ -1385,8 +1485,8 @@
     ],
     "ServiceName": "ec2",
     "SubServiceName": "networkacl",
-    "Status": "FAIL",
-    "StatusExtended": "Network ACL acl-0607a8ae41e75fc27 has SSH port 22 open to the Internet.",
+    "Status": "PASS",
+    "StatusExtended": "Network ACL Default NACL (DO NOT USE, deny all traffic) does not have SSH port 22 open to the Internet.",
     "Severity": "medium",
     "ResourceType": "AwsEc2NetworkAcl",
     "ResourceDetails": "",
@@ -1439,9 +1539,82 @@
     "Region": "ap-southeast-1",
     "ResourceId": "acl-0607a8ae41e75fc27",
     "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:network-acl/acl-0607a8ae41e75fc27",
-    "ResourceTags": {}
+    "ResourceTags": {
+        "Environment": "Development",
+        "Name": "Default NACL (DO NOT USE, deny all traffic)",
+        "Project": "Network Hardened"
+    }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
+    "FindingUniqueId": "prowler-aws-ec2_networkacl_allow_ingress_tcp_port_3389-850960379897-ap-southeast-1-acl-0202546dbdd11cb3b",
+    "Provider": "aws",
+    "CheckID": "ec2_networkacl_allow_ingress_tcp_port_3389",
+    "CheckTitle": "Ensure no Network ACLs allow ingress from 0.0.0.0/0 to Microsoft RDP port 3389",
+    "CheckType": [
+        "Infrastructure Security"
+    ],
+    "ServiceName": "ec2",
+    "SubServiceName": "networkacl",
+    "Status": "PASS",
+    "StatusExtended": "Network ACL Web NACL does not have Microsoft RDP port 3389 open to the Internet.",
+    "Severity": "medium",
+    "ResourceType": "AwsEc2NetworkAcl",
+    "ResourceDetails": "",
+    "Description": "Ensure no Network ACLs allow ingress from 0.0.0.0/0 to Microsoft RDP port 3389",
+    "Risk": "Even having a perimeter firewall, having network acls open allows any user or malware with vpc access to scan for well known and sensitive ports and gain access to instance.",
+    "RelatedUrl": "",
+    "Remediation": {
+        "Code": {
+            "NativeIaC": "https://docs.bridgecrew.io/docs/ensure-aws-nacl-does-not-allow-ingress-from-00000-to-port-3389#cloudformation",
+            "Terraform": "https://docs.bridgecrew.io/docs/ensure-aws-nacl-does-not-allow-ingress-from-00000-to-port-3389#terraform",
+            "CLI": "",
+            "Other": ""
+        },
+        "Recommendation": {
+            "Text": "Apply Zero Trust approach. Implement a process to scan and remediate unrestricted or overly permissive network acls. Recommended best practices is to narrow the definition for the minimum ports required.",
+            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html"
+        }
+    },
+    "Compliance": {
+        "CIS-1.4": [
+            "5.1"
+        ],
+        "CIS-1.5": [
+            "5.1"
+        ],
+        "MITRE-ATTACK": [
+            "T1199",
+            "T1048",
+            "T1499",
+            "T1498",
+            "T1046"
+        ],
+        "CIS-2.0": [
+            "5.1"
+        ],
+        "AWS-Well-Architected-Framework-Security-Pillar": [
+            "SEC05-BP03"
+        ]
+    },
+    "Categories": [
+        "internet-exposed"
+    ],
+    "DependsOn": [],
+    "RelatedTo": [],
+    "Notes": "",
+    "Profile": null,
+    "AccountId": "850960379897",
+    "OrganizationsInfo": null,
+    "Region": "ap-southeast-1",
+    "ResourceId": "acl-0202546dbdd11cb3b",
+    "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:network-acl/acl-0202546dbdd11cb3b",
+    "ResourceTags": {
+        "Environment": "Development",
+        "Project": "Network Hardened",
+        "Name": "Web NACL"
+    }
+},{
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_networkacl_allow_ingress_tcp_port_3389-850960379897-ap-southeast-1-acl-0607a8ae41e75fc27",
     "Provider": "aws",
     "CheckID": "ec2_networkacl_allow_ingress_tcp_port_3389",
@@ -1451,8 +1624,8 @@
     ],
     "ServiceName": "ec2",
     "SubServiceName": "networkacl",
-    "Status": "FAIL",
-    "StatusExtended": "Network ACL acl-0607a8ae41e75fc27 has Microsoft RDP port 3389 open to the Internet.",
+    "Status": "PASS",
+    "StatusExtended": "Network ACL Default NACL (DO NOT USE, deny all traffic) does not have Microsoft RDP port 3389 open to the Internet.",
     "Severity": "medium",
     "ResourceType": "AwsEc2NetworkAcl",
     "ResourceDetails": "",
@@ -1504,9 +1677,13 @@
     "Region": "ap-southeast-1",
     "ResourceId": "acl-0607a8ae41e75fc27",
     "ResourceArn": "arn:aws:ec2:ap-southeast-1:850960379897:network-acl/acl-0607a8ae41e75fc27",
-    "ResourceTags": {}
+    "ResourceTags": {
+        "Environment": "Development",
+        "Name": "Default NACL (DO NOT USE, deny all traffic)",
+        "Project": "Network Hardened"
+    }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_any_port-850960379897-ap-southeast-1-sg-0c5fc65165567f9fc",
     "Provider": "aws",
     "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_any_port",
@@ -1584,7 +1761,7 @@
         "Environment": "Development"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_any_port-850960379897-ap-southeast-1-sg-0b6a1a57fb0b393e0",
     "Provider": "aws",
     "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_any_port",
@@ -1662,7 +1839,7 @@
         "Project": "Network Hardened"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_port_mongodb_27017_27018-850960379897-ap-southeast-1-sg-0c5fc65165567f9fc",
     "Provider": "aws",
     "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_port_mongodb_27017_27018",
@@ -1722,7 +1899,7 @@
         "Environment": "Development"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_port_mongodb_27017_27018-850960379897-ap-southeast-1-sg-0b6a1a57fb0b393e0",
     "Provider": "aws",
     "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_port_mongodb_27017_27018",
@@ -1782,7 +1959,7 @@
         "Project": "Network Hardened"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_ftp_port_20_21-850960379897-ap-southeast-1-sg-0c5fc65165567f9fc",
     "Provider": "aws",
     "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_ftp_port_20_21",
@@ -1842,7 +2019,7 @@
         "Environment": "Development"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_ftp_port_20_21-850960379897-ap-southeast-1-sg-0b6a1a57fb0b393e0",
     "Provider": "aws",
     "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_ftp_port_20_21",
@@ -1902,7 +2079,7 @@
         "Project": "Network Hardened"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_22-850960379897-ap-southeast-1-sg-0c5fc65165567f9fc",
     "Provider": "aws",
     "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_22",
@@ -2065,7 +2242,7 @@
         "Environment": "Development"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_22-850960379897-ap-southeast-1-sg-0b6a1a57fb0b393e0",
     "Provider": "aws",
     "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_22",
@@ -2075,8 +2252,8 @@
     ],
     "ServiceName": "ec2",
     "SubServiceName": "securitygroup",
-    "Status": "FAIL",
-    "StatusExtended": "Security group terraform-20250924034142150400000002 (sg-0b6a1a57fb0b393e0) has SSH port 22 open to the Internet.",
+    "Status": "PASS",
+    "StatusExtended": "Security group terraform-20250924034142150400000002 (sg-0b6a1a57fb0b393e0) does not have SSH port 22 open to the Internet.",
     "Severity": "high",
     "ResourceType": "AwsEc2SecurityGroup",
     "ResourceDetails": "terraform-20250924034142150400000002",
@@ -2228,7 +2405,7 @@
         "Project": "Network Hardened"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_3389-850960379897-ap-southeast-1-sg-0c5fc65165567f9fc",
     "Provider": "aws",
     "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_3389",
@@ -2309,7 +2486,7 @@
         "Environment": "Development"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_3389-850960379897-ap-southeast-1-sg-0b6a1a57fb0b393e0",
     "Provider": "aws",
     "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_3389",
@@ -2390,7 +2567,7 @@
         "Project": "Network Hardened"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_cassandra_7199_9160_8888-850960379897-ap-southeast-1-sg-0c5fc65165567f9fc",
     "Provider": "aws",
     "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_cassandra_7199_9160_8888",
@@ -2450,7 +2627,7 @@
         "Environment": "Development"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_cassandra_7199_9160_8888-850960379897-ap-southeast-1-sg-0b6a1a57fb0b393e0",
     "Provider": "aws",
     "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_cassandra_7199_9160_8888",
@@ -2510,7 +2687,7 @@
         "Project": "Network Hardened"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_elasticsearch_kibana_9200_9300_5601-850960379897-ap-southeast-1-sg-0c5fc65165567f9fc",
     "Provider": "aws",
     "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_elasticsearch_kibana_9200_9300_5601",
@@ -2570,7 +2747,7 @@
         "Environment": "Development"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_elasticsearch_kibana_9200_9300_5601-850960379897-ap-southeast-1-sg-0b6a1a57fb0b393e0",
     "Provider": "aws",
     "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_elasticsearch_kibana_9200_9300_5601",
@@ -2630,7 +2807,7 @@
         "Project": "Network Hardened"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_kafka_9092-850960379897-ap-southeast-1-sg-0c5fc65165567f9fc",
     "Provider": "aws",
     "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_kafka_9092",
@@ -2690,7 +2867,7 @@
         "Environment": "Development"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_kafka_9092-850960379897-ap-southeast-1-sg-0b6a1a57fb0b393e0",
     "Provider": "aws",
     "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_kafka_9092",
@@ -2750,7 +2927,7 @@
         "Project": "Network Hardened"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_memcached_11211-850960379897-ap-southeast-1-sg-0c5fc65165567f9fc",
     "Provider": "aws",
     "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_memcached_11211",
@@ -2810,7 +2987,7 @@
         "Environment": "Development"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_memcached_11211-850960379897-ap-southeast-1-sg-0b6a1a57fb0b393e0",
     "Provider": "aws",
     "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_memcached_11211",
@@ -2870,7 +3047,7 @@
         "Project": "Network Hardened"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_mysql_3306-850960379897-ap-southeast-1-sg-0c5fc65165567f9fc",
     "Provider": "aws",
     "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_mysql_3306",
@@ -2930,7 +3107,7 @@
         "Environment": "Development"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_mysql_3306-850960379897-ap-southeast-1-sg-0b6a1a57fb0b393e0",
     "Provider": "aws",
     "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_mysql_3306",
@@ -2990,7 +3167,7 @@
         "Project": "Network Hardened"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_oracle_1521_2483-850960379897-ap-southeast-1-sg-0c5fc65165567f9fc",
     "Provider": "aws",
     "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_oracle_1521_2483",
@@ -3050,7 +3227,7 @@
         "Environment": "Development"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_oracle_1521_2483-850960379897-ap-southeast-1-sg-0b6a1a57fb0b393e0",
     "Provider": "aws",
     "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_oracle_1521_2483",
@@ -3110,7 +3287,7 @@
         "Project": "Network Hardened"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_postgres_5432-850960379897-ap-southeast-1-sg-0c5fc65165567f9fc",
     "Provider": "aws",
     "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_postgres_5432",
@@ -3170,7 +3347,7 @@
         "Environment": "Development"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_postgres_5432-850960379897-ap-southeast-1-sg-0b6a1a57fb0b393e0",
     "Provider": "aws",
     "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_postgres_5432",
@@ -3230,7 +3407,7 @@
         "Project": "Network Hardened"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_redis_6379-850960379897-ap-southeast-1-sg-0c5fc65165567f9fc",
     "Provider": "aws",
     "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_redis_6379",
@@ -3290,7 +3467,7 @@
         "Environment": "Development"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_redis_6379-850960379897-ap-southeast-1-sg-0b6a1a57fb0b393e0",
     "Provider": "aws",
     "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_redis_6379",
@@ -3350,7 +3527,7 @@
         "Project": "Network Hardened"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_sql_server_1433_1434-850960379897-ap-southeast-1-sg-0c5fc65165567f9fc",
     "Provider": "aws",
     "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_sql_server_1433_1434",
@@ -3410,7 +3587,7 @@
         "Environment": "Development"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_sql_server_1433_1434-850960379897-ap-southeast-1-sg-0b6a1a57fb0b393e0",
     "Provider": "aws",
     "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_sql_server_1433_1434",
@@ -3470,7 +3647,7 @@
         "Project": "Network Hardened"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_telnet_23-850960379897-ap-southeast-1-sg-0c5fc65165567f9fc",
     "Provider": "aws",
     "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_telnet_23",
@@ -3530,7 +3707,7 @@
         "Environment": "Development"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_telnet_23-850960379897-ap-southeast-1-sg-0b6a1a57fb0b393e0",
     "Provider": "aws",
     "CheckID": "ec2_securitygroup_allow_ingress_from_internet_to_tcp_port_telnet_23",
@@ -3590,7 +3767,7 @@
         "Project": "Network Hardened"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_wide_open_public_ipv4-850960379897-ap-southeast-1-sg-0c5fc65165567f9fc",
     "Provider": "aws",
     "CheckID": "ec2_securitygroup_allow_wide_open_public_ipv4",
@@ -3643,7 +3820,7 @@
         "Environment": "Development"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_securitygroup_allow_wide_open_public_ipv4-850960379897-ap-southeast-1-sg-0b6a1a57fb0b393e0",
     "Provider": "aws",
     "CheckID": "ec2_securitygroup_allow_wide_open_public_ipv4",
@@ -3696,7 +3873,7 @@
         "Project": "Network Hardened"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_securitygroup_default_restrict_traffic-850960379897-ap-southeast-1-sg-0c5fc65165567f9fc",
     "Provider": "aws",
     "CheckID": "ec2_securitygroup_default_restrict_traffic",
@@ -3845,7 +4022,7 @@
         "Environment": "Development"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_securitygroup_from_launch_wizard-850960379897-ap-southeast-1-sg-0c5fc65165567f9fc",
     "Provider": "aws",
     "CheckID": "ec2_securitygroup_from_launch_wizard",
@@ -3899,7 +4076,7 @@
         "Environment": "Development"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_securitygroup_from_launch_wizard-850960379897-ap-southeast-1-sg-0b6a1a57fb0b393e0",
     "Provider": "aws",
     "CheckID": "ec2_securitygroup_from_launch_wizard",
@@ -3953,7 +4130,7 @@
         "Project": "Network Hardened"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_securitygroup_not_used-850960379897-ap-southeast-1-sg-0b6a1a57fb0b393e0",
     "Provider": "aws",
     "CheckID": "ec2_securitygroup_not_used",
@@ -4010,7 +4187,7 @@
         "Project": "Network Hardened"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_securitygroup_with_many_ingress_egress_rules-850960379897-ap-southeast-1-sg-0c5fc65165567f9fc",
     "Provider": "aws",
     "CheckID": "ec2_securitygroup_with_many_ingress_egress_rules",
@@ -4061,7 +4238,7 @@
         "Environment": "Development"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-ec2_securitygroup_with_many_ingress_egress_rules-850960379897-ap-southeast-1-sg-0b6a1a57fb0b393e0",
     "Provider": "aws",
     "CheckID": "ec2_securitygroup_with_many_ingress_egress_rules",
@@ -4072,7 +4249,7 @@
     "ServiceName": "ec2",
     "SubServiceName": "securitygroup",
     "Status": "PASS",
-    "StatusExtended": "Security group terraform-20250924034142150400000002 (sg-0b6a1a57fb0b393e0) has 2 inbound rules and 1 outbound rules.",
+    "StatusExtended": "Security group terraform-20250924034142150400000002 (sg-0b6a1a57fb0b393e0) has 1 inbound rules and 1 outbound rules.",
     "Severity": "high",
     "ResourceType": "AwsEc2SecurityGroup",
     "ResourceDetails": "terraform-20250924034142150400000002",
@@ -4112,7 +4289,7 @@
         "Project": "Network Hardened"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-vpc_different_regions-850960379897-ap-southeast-1-850960379897",
     "Provider": "aws",
     "CheckID": "vpc_different_regions",
@@ -4155,7 +4332,7 @@
     "ResourceArn": "arn:aws:iam::850960379897:root",
     "ResourceTags": {}
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-vpc_flow_logs_enabled-850960379897-ap-southeast-1-vpc-0773d65b3202ab18b",
     "Provider": "aws",
     "CheckID": "vpc_flow_logs_enabled",
@@ -4333,7 +4510,7 @@
         "Name": "VPC Main"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-vpc_subnet_different_az-850960379897-ap-southeast-1-vpc-0773d65b3202ab18b",
     "Provider": "aws",
     "CheckID": "vpc_subnet_different_az",
@@ -4384,7 +4561,7 @@
         "Name": "VPC Main"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-vpc_subnet_no_public_ip_by_default-850960379897-ap-southeast-1-subnet-04838fb39ff31b6ac",
     "Provider": "aws",
     "CheckID": "vpc_subnet_no_public_ip_by_default",
@@ -4431,7 +4608,7 @@
         "Name": "Subnet Public Main"
     }
 },{
-    "AssessmentStartTime": "2025-09-24T11:49:59.480042",
+    "AssessmentStartTime": "2025-09-25T15:10:39.950330",
     "FindingUniqueId": "prowler-aws-vpc_subnet_separate_private_public-850960379897-ap-southeast-1-vpc-0773d65b3202ab18b",
     "Provider": "aws",
     "CheckID": "vpc_subnet_separate_private_public",

@@ -69,9 +69,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -180,9 +180,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -273,9 +273,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -388,9 +388,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -496,9 +496,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -617,9 +617,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -724,9 +724,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -846,9 +846,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -929,7 +929,7 @@
             "details": ""
         }
     ],
-    "status_detail": "EC2 Instance i-00a3ae5c672f62596 is not older than 180 days (0 days).",
+    "status_detail": "EC2 Instance i-00a3ae5c672f62596 is not older than 180 days (1 days).",
     "compliance": {
         "status": "Success",
         "requirements": [
@@ -945,9 +945,9 @@
             "FedRamp-Moderate-Revision-4: cm-2",
             "FedRAMP-Low-Revision-4: cm-2"
         ],
-        "status_detail": "EC2 Instance i-00a3ae5c672f62596 is not older than 180 days (0 days)."
+        "status_detail": "EC2 Instance i-00a3ae5c672f62596 is not older than 180 days (1 days)."
     },
-    "message": "EC2 Instance i-00a3ae5c672f62596 is not older than 180 days (0 days).",
+    "message": "EC2 Instance i-00a3ae5c672f62596 is not older than 180 days (1 days).",
     "severity_id": 3,
     "severity": "Medium",
     "cloud": {
@@ -963,9 +963,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -1077,9 +1077,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -1200,9 +1200,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -1310,9 +1310,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -1365,7 +1365,7 @@
             "CIS AWS Foundations Benchmark"
         ],
         "src_url": "",
-        "uid": "prowler-aws-ec2_networkacl_allow_ingress_any_port-850960379897-ap-southeast-1-acl-0607a8ae41e75fc27",
+        "uid": "prowler-aws-ec2_networkacl_allow_ingress_any_port-850960379897-ap-southeast-1-acl-0202546dbdd11cb3b",
         "related_events": []
     },
     "resources": [
@@ -1374,16 +1374,29 @@
                 "name": "ec2"
             },
             "region": "ap-southeast-1",
-            "name": "acl-0607a8ae41e75fc27",
-            "uid": "arn:aws:ec2:ap-southeast-1:850960379897:network-acl/acl-0607a8ae41e75fc27",
-            "labels": [],
+            "name": "acl-0202546dbdd11cb3b",
+            "uid": "arn:aws:ec2:ap-southeast-1:850960379897:network-acl/acl-0202546dbdd11cb3b",
+            "labels": [
+                {
+                    "Key": "Environment",
+                    "Value": "Development"
+                },
+                {
+                    "Key": "Project",
+                    "Value": "Network Hardened"
+                },
+                {
+                    "Key": "Name",
+                    "Value": "Web NACL"
+                }
+            ],
             "type": "AwsEc2NetworkAcl",
             "details": ""
         }
     ],
-    "status_detail": "Network ACL acl-0607a8ae41e75fc27 has every port open to the Internet.",
+    "status_detail": "Network ACL Web NACL does not have every port open to the Internet.",
     "compliance": {
-        "status": "Failure",
+        "status": "Success",
         "requirements": [
             "CISA: your-data-2",
             "CIS-1.4: 5.1",
@@ -1403,9 +1416,9 @@
             "FedRamp-Moderate-Revision-4: ac-4, ac-17-1, ac-21-b, cm-2, sc-4, sc-7-3, sc-7",
             "FedRAMP-Low-Revision-4: ac-17, cm-2, sc-7"
         ],
-        "status_detail": "Network ACL acl-0607a8ae41e75fc27 has every port open to the Internet."
+        "status_detail": "Network ACL Web NACL does not have every port open to the Internet."
     },
-    "message": "Network ACL acl-0607a8ae41e75fc27 has every port open to the Internet.",
+    "message": "Network ACL Web NACL does not have every port open to the Internet.",
     "severity_id": 3,
     "severity": "Medium",
     "cloud": {
@@ -1421,9 +1434,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -1442,8 +1455,244 @@
     },
     "state_id": 0,
     "state": "New",
-    "status_id": 2,
-    "status": "Failure",
+    "status_id": 1,
+    "status": "Success",
+    "type_uid": 200101,
+    "type_name": "Security Finding: Create",
+    "impact_id": 0,
+    "impact": "Unknown",
+    "confidence_id": 0,
+    "confidence": "Unknown",
+    "activity_id": 1,
+    "activity_name": "Create",
+    "category_uid": 2,
+    "category_name": "Findings",
+    "class_uid": 2001,
+    "class_name": "Security Finding"
+},{
+    "finding": {
+        "title": "Ensure no Network ACLs allow ingress from 0.0.0.0/0 to any port.",
+        "desc": "Ensure no Network ACLs allow ingress from 0.0.0.0/0 to any port.",
+        "supporting_data": {
+            "Risk": "Even having a perimeter firewall, having network acls open allows any user or malware with vpc access to scan for well known and sensitive ports and gain access to instance.",
+            "Notes": "Infrastructure Security"
+        },
+        "remediation": {
+            "kb_articles": [
+                "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html"
+            ],
+            "desc": "Apply Zero Trust approach. Implement a process to scan and remediate unrestricted or overly permissive network acls. Recommended best practices is to narrow the definition for the minimum ports required."
+        },
+        "types": [
+            "Software and Configuration Checks",
+            "Industry and Regulatory Standards",
+            "CIS AWS Foundations Benchmark"
+        ],
+        "src_url": "",
+        "uid": "prowler-aws-ec2_networkacl_allow_ingress_any_port-850960379897-ap-southeast-1-acl-0607a8ae41e75fc27",
+        "related_events": []
+    },
+    "resources": [
+        {
+            "group": {
+                "name": "ec2"
+            },
+            "region": "ap-southeast-1",
+            "name": "acl-0607a8ae41e75fc27",
+            "uid": "arn:aws:ec2:ap-southeast-1:850960379897:network-acl/acl-0607a8ae41e75fc27",
+            "labels": [
+                {
+                    "Key": "Environment",
+                    "Value": "Development"
+                },
+                {
+                    "Key": "Name",
+                    "Value": "Default NACL (DO NOT USE, deny all traffic)"
+                },
+                {
+                    "Key": "Project",
+                    "Value": "Network Hardened"
+                }
+            ],
+            "type": "AwsEc2NetworkAcl",
+            "details": ""
+        }
+    ],
+    "status_detail": "Network ACL Default NACL (DO NOT USE, deny all traffic) does not have every port open to the Internet.",
+    "compliance": {
+        "status": "Success",
+        "requirements": [
+            "CISA: your-data-2",
+            "CIS-1.4: 5.1",
+            "CIS-1.5: 5.1",
+            "MITRE-ATTACK: T1199, T1048, T1499, T1498, T1046",
+            "AWS-Foundational-Security-Best-Practices: ec2",
+            "HIPAA: 164_308_a_1_ii_b, 164_312_e_1",
+            "CIS-2.0: 5.1",
+            "GxP-21-CFR-Part-11: 11.10-d, 11.10-g, 11.10-k",
+            "AWS-Well-Architected-Framework-Security-Pillar: SEC05-BP03",
+            "NIST-800-171-Revision-2: 3_1_1, 3_1_2, 3_1_3, 3_1_14, 3_1_20, 3_4_1, 3_4_7, 3_13_1, 3_13_2, 3_13_5, 3_13_6",
+            "NIST-800-53-Revision-4: ac_4, cm_2, sc_7_3, sc_7",
+            "NIST-800-53-Revision-5: ac_4_21, ac_17_b, ac_17_1, ac_17_4_a, ac_17_9, ac_17_10, cm_2_a, cm_2_2, cm_6_a, cm_7_b, cm_8_6, cm_9_b, sc_7_5, sc_7_7, sc_7_11, sc_7_12, sc_7_16, sc_7_21, sc_7_24_b, sc_7_25, sc_7_26, sc_7_27, sc_7_28, sc_7_a, sc_7_c",
+            "NIST-CSF-1.1: ae_1, ac_3, ac_5, pt_4",
+            "RBI-Cyber-Security-Framework: annex_i_1_3, annex_i_5_1",
+            "FFIEC: d3-pc-am-b-10, d3-pc-im-b-1, d3-pc-im-b-2, d3-pc-im-b-6, d4-c-co-b-2",
+            "FedRamp-Moderate-Revision-4: ac-4, ac-17-1, ac-21-b, cm-2, sc-4, sc-7-3, sc-7",
+            "FedRAMP-Low-Revision-4: ac-17, cm-2, sc-7"
+        ],
+        "status_detail": "Network ACL Default NACL (DO NOT USE, deny all traffic) does not have every port open to the Internet."
+    },
+    "message": "Network ACL Default NACL (DO NOT USE, deny all traffic) does not have every port open to the Internet.",
+    "severity_id": 3,
+    "severity": "Medium",
+    "cloud": {
+        "account": {
+            "name": "",
+            "uid": "850960379897"
+        },
+        "region": "ap-southeast-1",
+        "org": {
+            "uid": "",
+            "name": ""
+        },
+        "provider": "aws",
+        "project_uid": ""
+    },
+    "time": "2025-09-25 15:10:39.950330",
+    "metadata": {
+        "original_time": "2025-09-25T15:10:39.950330",
+        "profiles": [
+            "default"
+        ],
+        "product": {
+            "language": "en",
+            "name": "Prowler",
+            "version": "3.11.3",
+            "vendor_name": "Prowler/ProwlerPro",
+            "feature": {
+                "name": "ec2_networkacl_allow_ingress_any_port",
+                "uid": "ec2_networkacl_allow_ingress_any_port",
+                "version": "3.11.3"
+            }
+        },
+        "version": "1.0.0-rc.3"
+    },
+    "state_id": 0,
+    "state": "New",
+    "status_id": 1,
+    "status": "Success",
+    "type_uid": 200101,
+    "type_name": "Security Finding: Create",
+    "impact_id": 0,
+    "impact": "Unknown",
+    "confidence_id": 0,
+    "confidence": "Unknown",
+    "activity_id": 1,
+    "activity_name": "Create",
+    "category_uid": 2,
+    "category_name": "Findings",
+    "class_uid": 2001,
+    "class_name": "Security Finding"
+},{
+    "finding": {
+        "title": "Ensure no Network ACLs allow ingress from 0.0.0.0/0 to SSH port 22",
+        "desc": "Ensure no Network ACLs allow ingress from 0.0.0.0/0 to SSH port 22",
+        "supporting_data": {
+            "Risk": "Even having a perimeter firewall, having network acls open allows any user or malware with vpc access to scan for well known and sensitive ports and gain access to instance.",
+            "Notes": ""
+        },
+        "remediation": {
+            "kb_articles": [
+                "https://docs.bridgecrew.io/docs/ensure-aws-nacl-does-not-allow-ingress-from-00000-to-port-22#cloudformation",
+                "https://docs.bridgecrew.io/docs/ensure-aws-nacl-does-not-allow-ingress-from-00000-to-port-22#terraform",
+                "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html"
+            ],
+            "desc": "Apply Zero Trust approach. Implement a process to scan and remediate unrestricted or overly permissive network acls. Recommended best practices is to narrow the definition for the minimum ports required."
+        },
+        "types": [
+            "Infrastructure Security"
+        ],
+        "src_url": "",
+        "uid": "prowler-aws-ec2_networkacl_allow_ingress_tcp_port_22-850960379897-ap-southeast-1-acl-0202546dbdd11cb3b",
+        "related_events": []
+    },
+    "resources": [
+        {
+            "group": {
+                "name": "ec2"
+            },
+            "region": "ap-southeast-1",
+            "name": "acl-0202546dbdd11cb3b",
+            "uid": "arn:aws:ec2:ap-southeast-1:850960379897:network-acl/acl-0202546dbdd11cb3b",
+            "labels": [
+                {
+                    "Key": "Environment",
+                    "Value": "Development"
+                },
+                {
+                    "Key": "Project",
+                    "Value": "Network Hardened"
+                },
+                {
+                    "Key": "Name",
+                    "Value": "Web NACL"
+                }
+            ],
+            "type": "AwsEc2NetworkAcl",
+            "details": ""
+        }
+    ],
+    "status_detail": "Network ACL Web NACL does not have SSH port 22 open to the Internet.",
+    "compliance": {
+        "status": "Success",
+        "requirements": [
+            "CIS-1.4: 5.1",
+            "CIS-1.5: 5.1",
+            "MITRE-ATTACK: T1199, T1048, T1499, T1498, T1046",
+            "CIS-2.0: 5.1",
+            "AWS-Well-Architected-Framework-Security-Pillar: SEC05-BP02, SEC05-BP03"
+        ],
+        "status_detail": "Network ACL Web NACL does not have SSH port 22 open to the Internet."
+    },
+    "message": "Network ACL Web NACL does not have SSH port 22 open to the Internet.",
+    "severity_id": 3,
+    "severity": "Medium",
+    "cloud": {
+        "account": {
+            "name": "",
+            "uid": "850960379897"
+        },
+        "region": "ap-southeast-1",
+        "org": {
+            "uid": "",
+            "name": ""
+        },
+        "provider": "aws",
+        "project_uid": ""
+    },
+    "time": "2025-09-25 15:10:39.950330",
+    "metadata": {
+        "original_time": "2025-09-25T15:10:39.950330",
+        "profiles": [
+            "default"
+        ],
+        "product": {
+            "language": "en",
+            "name": "Prowler",
+            "version": "3.11.3",
+            "vendor_name": "Prowler/ProwlerPro",
+            "feature": {
+                "name": "ec2_networkacl_allow_ingress_tcp_port_22",
+                "uid": "ec2_networkacl_allow_ingress_tcp_port_22",
+                "version": "3.11.3"
+            }
+        },
+        "version": "1.0.0-rc.3"
+    },
+    "state_id": 0,
+    "state": "New",
+    "status_id": 1,
+    "status": "Success",
     "type_uid": 200101,
     "type_name": "Security Finding: Create",
     "impact_id": 0,
@@ -1487,14 +1736,27 @@
             "region": "ap-southeast-1",
             "name": "acl-0607a8ae41e75fc27",
             "uid": "arn:aws:ec2:ap-southeast-1:850960379897:network-acl/acl-0607a8ae41e75fc27",
-            "labels": [],
+            "labels": [
+                {
+                    "Key": "Environment",
+                    "Value": "Development"
+                },
+                {
+                    "Key": "Name",
+                    "Value": "Default NACL (DO NOT USE, deny all traffic)"
+                },
+                {
+                    "Key": "Project",
+                    "Value": "Network Hardened"
+                }
+            ],
             "type": "AwsEc2NetworkAcl",
             "details": ""
         }
     ],
-    "status_detail": "Network ACL acl-0607a8ae41e75fc27 has SSH port 22 open to the Internet.",
+    "status_detail": "Network ACL Default NACL (DO NOT USE, deny all traffic) does not have SSH port 22 open to the Internet.",
     "compliance": {
-        "status": "Failure",
+        "status": "Success",
         "requirements": [
             "CIS-1.4: 5.1",
             "CIS-1.5: 5.1",
@@ -1502,9 +1764,9 @@
             "CIS-2.0: 5.1",
             "AWS-Well-Architected-Framework-Security-Pillar: SEC05-BP02, SEC05-BP03"
         ],
-        "status_detail": "Network ACL acl-0607a8ae41e75fc27 has SSH port 22 open to the Internet."
+        "status_detail": "Network ACL Default NACL (DO NOT USE, deny all traffic) does not have SSH port 22 open to the Internet."
     },
-    "message": "Network ACL acl-0607a8ae41e75fc27 has SSH port 22 open to the Internet.",
+    "message": "Network ACL Default NACL (DO NOT USE, deny all traffic) does not have SSH port 22 open to the Internet.",
     "severity_id": 3,
     "severity": "Medium",
     "cloud": {
@@ -1520,9 +1782,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -1541,8 +1803,120 @@
     },
     "state_id": 0,
     "state": "New",
-    "status_id": 2,
-    "status": "Failure",
+    "status_id": 1,
+    "status": "Success",
+    "type_uid": 200101,
+    "type_name": "Security Finding: Create",
+    "impact_id": 0,
+    "impact": "Unknown",
+    "confidence_id": 0,
+    "confidence": "Unknown",
+    "activity_id": 1,
+    "activity_name": "Create",
+    "category_uid": 2,
+    "category_name": "Findings",
+    "class_uid": 2001,
+    "class_name": "Security Finding"
+},{
+    "finding": {
+        "title": "Ensure no Network ACLs allow ingress from 0.0.0.0/0 to Microsoft RDP port 3389",
+        "desc": "Ensure no Network ACLs allow ingress from 0.0.0.0/0 to Microsoft RDP port 3389",
+        "supporting_data": {
+            "Risk": "Even having a perimeter firewall, having network acls open allows any user or malware with vpc access to scan for well known and sensitive ports and gain access to instance.",
+            "Notes": ""
+        },
+        "remediation": {
+            "kb_articles": [
+                "https://docs.bridgecrew.io/docs/ensure-aws-nacl-does-not-allow-ingress-from-00000-to-port-3389#cloudformation",
+                "https://docs.bridgecrew.io/docs/ensure-aws-nacl-does-not-allow-ingress-from-00000-to-port-3389#terraform",
+                "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html"
+            ],
+            "desc": "Apply Zero Trust approach. Implement a process to scan and remediate unrestricted or overly permissive network acls. Recommended best practices is to narrow the definition for the minimum ports required."
+        },
+        "types": [
+            "Infrastructure Security"
+        ],
+        "src_url": "",
+        "uid": "prowler-aws-ec2_networkacl_allow_ingress_tcp_port_3389-850960379897-ap-southeast-1-acl-0202546dbdd11cb3b",
+        "related_events": []
+    },
+    "resources": [
+        {
+            "group": {
+                "name": "ec2"
+            },
+            "region": "ap-southeast-1",
+            "name": "acl-0202546dbdd11cb3b",
+            "uid": "arn:aws:ec2:ap-southeast-1:850960379897:network-acl/acl-0202546dbdd11cb3b",
+            "labels": [
+                {
+                    "Key": "Environment",
+                    "Value": "Development"
+                },
+                {
+                    "Key": "Project",
+                    "Value": "Network Hardened"
+                },
+                {
+                    "Key": "Name",
+                    "Value": "Web NACL"
+                }
+            ],
+            "type": "AwsEc2NetworkAcl",
+            "details": ""
+        }
+    ],
+    "status_detail": "Network ACL Web NACL does not have Microsoft RDP port 3389 open to the Internet.",
+    "compliance": {
+        "status": "Success",
+        "requirements": [
+            "CIS-1.4: 5.1",
+            "CIS-1.5: 5.1",
+            "MITRE-ATTACK: T1199, T1048, T1499, T1498, T1046",
+            "CIS-2.0: 5.1",
+            "AWS-Well-Architected-Framework-Security-Pillar: SEC05-BP03"
+        ],
+        "status_detail": "Network ACL Web NACL does not have Microsoft RDP port 3389 open to the Internet."
+    },
+    "message": "Network ACL Web NACL does not have Microsoft RDP port 3389 open to the Internet.",
+    "severity_id": 3,
+    "severity": "Medium",
+    "cloud": {
+        "account": {
+            "name": "",
+            "uid": "850960379897"
+        },
+        "region": "ap-southeast-1",
+        "org": {
+            "uid": "",
+            "name": ""
+        },
+        "provider": "aws",
+        "project_uid": ""
+    },
+    "time": "2025-09-25 15:10:39.950330",
+    "metadata": {
+        "original_time": "2025-09-25T15:10:39.950330",
+        "profiles": [
+            "default"
+        ],
+        "product": {
+            "language": "en",
+            "name": "Prowler",
+            "version": "3.11.3",
+            "vendor_name": "Prowler/ProwlerPro",
+            "feature": {
+                "name": "ec2_networkacl_allow_ingress_tcp_port_3389",
+                "uid": "ec2_networkacl_allow_ingress_tcp_port_3389",
+                "version": "3.11.3"
+            }
+        },
+        "version": "1.0.0-rc.3"
+    },
+    "state_id": 0,
+    "state": "New",
+    "status_id": 1,
+    "status": "Success",
     "type_uid": 200101,
     "type_name": "Security Finding: Create",
     "impact_id": 0,
@@ -1586,14 +1960,27 @@
             "region": "ap-southeast-1",
             "name": "acl-0607a8ae41e75fc27",
             "uid": "arn:aws:ec2:ap-southeast-1:850960379897:network-acl/acl-0607a8ae41e75fc27",
-            "labels": [],
+            "labels": [
+                {
+                    "Key": "Environment",
+                    "Value": "Development"
+                },
+                {
+                    "Key": "Name",
+                    "Value": "Default NACL (DO NOT USE, deny all traffic)"
+                },
+                {
+                    "Key": "Project",
+                    "Value": "Network Hardened"
+                }
+            ],
             "type": "AwsEc2NetworkAcl",
             "details": ""
         }
     ],
-    "status_detail": "Network ACL acl-0607a8ae41e75fc27 has Microsoft RDP port 3389 open to the Internet.",
+    "status_detail": "Network ACL Default NACL (DO NOT USE, deny all traffic) does not have Microsoft RDP port 3389 open to the Internet.",
     "compliance": {
-        "status": "Failure",
+        "status": "Success",
         "requirements": [
             "CIS-1.4: 5.1",
             "CIS-1.5: 5.1",
@@ -1601,9 +1988,9 @@
             "CIS-2.0: 5.1",
             "AWS-Well-Architected-Framework-Security-Pillar: SEC05-BP03"
         ],
-        "status_detail": "Network ACL acl-0607a8ae41e75fc27 has Microsoft RDP port 3389 open to the Internet."
+        "status_detail": "Network ACL Default NACL (DO NOT USE, deny all traffic) does not have Microsoft RDP port 3389 open to the Internet."
     },
-    "message": "Network ACL acl-0607a8ae41e75fc27 has Microsoft RDP port 3389 open to the Internet.",
+    "message": "Network ACL Default NACL (DO NOT USE, deny all traffic) does not have Microsoft RDP port 3389 open to the Internet.",
     "severity_id": 3,
     "severity": "Medium",
     "cloud": {
@@ -1619,9 +2006,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -1640,8 +2027,8 @@
     },
     "state_id": 0,
     "state": "New",
-    "status_id": 2,
-    "status": "Failure",
+    "status_id": 1,
+    "status": "Success",
     "type_uid": 200101,
     "type_name": "Security Finding: Create",
     "impact_id": 0,
@@ -1731,9 +2118,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -1843,9 +2230,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -1950,9 +2337,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -2057,9 +2444,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -2164,9 +2551,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -2271,9 +2658,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -2400,9 +2787,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -2529,9 +2916,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -2646,9 +3033,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -2763,9 +3150,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -2870,9 +3257,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -2977,9 +3364,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -3084,9 +3471,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -3191,9 +3578,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -3298,9 +3685,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -3405,9 +3792,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -3512,9 +3899,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -3619,9 +4006,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -3726,9 +4113,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -3833,9 +4220,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -3940,9 +4327,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -4047,9 +4434,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -4154,9 +4541,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -4261,9 +4648,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -4368,9 +4755,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -4475,9 +4862,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -4582,9 +4969,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -4689,9 +5076,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -4796,9 +5183,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -4903,9 +5290,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -5009,9 +5396,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -5115,9 +5502,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -5240,9 +5627,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -5348,9 +5735,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -5456,9 +5843,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -5564,9 +5951,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -5670,9 +6057,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -5776,9 +6163,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -5868,9 +6255,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -5996,9 +6383,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -6103,9 +6490,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -6208,9 +6595,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],
@@ -6315,9 +6702,9 @@
         "provider": "aws",
         "project_uid": ""
     },
-    "time": "2025-09-24 16:24:05.752789",
+    "time": "2025-09-25 15:10:39.950330",
     "metadata": {
-        "original_time": "2025-09-24T16:24:05.752789",
+        "original_time": "2025-09-25T15:10:39.950330",
         "profiles": [
             "default"
         ],

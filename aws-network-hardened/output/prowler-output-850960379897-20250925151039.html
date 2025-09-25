@@ -69,7 +69,7 @@
                 <b>Parameters used:</b> aws --services ec2 vpc --region ap-southeast-1
                 </li>
                 <li class="list-group-item">
-                <b>Date:</b> 2025-09-24T16:24:05.752789
+                <b>Date:</b> 2025-09-25T15:10:39.950330
                 </li>
             </ul>
             </div>
@@ -115,16 +115,16 @@
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
-                        <b>Total Findings:</b> 58
+                        <b>Total Findings:</b> 61
                     </li>
                     <li class="list-group-item">
-                        <b>Passed:</b> 45
+                        <b>Passed:</b> 51
                     </li>
                     <li class="list-group-item">
-                        <b>Failed:</b> 13
+                        <b>Failed:</b> 10
                     </li>
                     <li class="list-group-item">
-                        <b>Total Resources:</b> 9
+                        <b>Total Resources:</b> 10
                     </li>
                 </ul>
             </div>
@@ -449,7 +449,7 @@
 
 &#x2022;Environment=Development
 </td>
-                    <td>EC2 Instance i-00a3ae5c672f62596 is not older than 180 days (0 days).</td>
+                    <td>EC2 Instance i-00a3ae5c672f62596 is not older than 180 days (1 days).</td>
                     <td><p class="show-read-more">Having old instances within your AWS account could increase the risk of having vulnerable software.</p></td>
                     <td><p class="show-read-more">Check if software running in the instance is up to date and patched accordingly. Use AWS Systems Manager to patch instances and view patching compliance information.</p> <a class="read-more" href="https://docs.aws.amazon.com/systems-manager/latest/userguide/viewing-patch-compliance-results.html"><i class="fas fa-external-link-alt"></i></a></td>
                     <td><p class="show-read-more">
@@ -590,16 +590,22 @@
 </p></td>
                 </tr>
                 
-                <tr class="table-danger">
-                    <td>FAIL</td>
+                <tr class="p-3 mb-2 bg-success-custom">
+                    <td>PASS</td>
                     <td>medium</td>
                     <td>ec2</td>
                     <td>ap-southeast-1</td>
                     <td>ec2<wbr>_networkacl<wbr>_allow<wbr>_ingress<wbr>_any<wbr>_port</td>
                     <td>Ensure no Network ACLs allow ingress from 0.0.0.0/0 to any port.</td>
-                    <td>acl-0607a8ae41e75fc27</td>
-                    <td></td>
-                    <td>Network ACL acl-0607a8ae41e75fc27 has every port open to the Internet.</td>
+                    <td>acl-0202546dbdd11cb3b</td>
+                    <td>
+&#x2022;Environment=Development
+
+&#x2022;Project=Network Hardened
+
+&#x2022;Name=Web NACL
+</td>
+                    <td>Network ACL Web NACL does not have every port open to the Internet.</td>
                     <td><p class="show-read-more">Even having a perimeter firewall, having network acls open allows any user or malware with vpc access to scan for well known and sensitive ports and gain access to instance.</p></td>
                     <td><p class="show-read-more">Apply Zero Trust approach. Implement a process to scan and remediate unrestricted or overly permissive network acls. Recommended best practices is to narrow the definition for the minimum ports required.</p> <a class="read-more" href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html"><i class="fas fa-external-link-alt"></i></a></td>
                     <td><p class="show-read-more">
@@ -639,16 +645,77 @@
 </p></td>
                 </tr>
                 
-                <tr class="table-danger">
-                    <td>FAIL</td>
+                <tr class="p-3 mb-2 bg-success-custom">
+                    <td>PASS</td>
+                    <td>medium</td>
+                    <td>ec2</td>
+                    <td>ap-southeast-1</td>
+                    <td>ec2<wbr>_networkacl<wbr>_allow<wbr>_ingress<wbr>_any<wbr>_port</td>
+                    <td>Ensure no Network ACLs allow ingress from 0.0.0.0/0 to any port.</td>
+                    <td>acl-0607a8ae41e75fc27</td>
+                    <td>
+&#x2022;Environment=Development
+
+&#x2022;Name=Default NACL (DO NOT USE, deny all traffic)
+
+&#x2022;Project=Network Hardened
+</td>
+                    <td>Network ACL Default NACL (DO NOT USE, deny all traffic) does not have every port open to the Internet.</td>
+                    <td><p class="show-read-more">Even having a perimeter firewall, having network acls open allows any user or malware with vpc access to scan for well known and sensitive ports and gain access to instance.</p></td>
+                    <td><p class="show-read-more">Apply Zero Trust approach. Implement a process to scan and remediate unrestricted or overly permissive network acls. Recommended best practices is to narrow the definition for the minimum ports required.</p> <a class="read-more" href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html"><i class="fas fa-external-link-alt"></i></a></td>
+                    <td><p class="show-read-more">
+&#x2022;CISA: your-data-2
+
+&#x2022;CIS-1.4: 5.1
+
+&#x2022;CIS-1.5: 5.1
+
+&#x2022;MITRE-ATTACK: T1199, T1048, T1499, T1498, T1046
+
+&#x2022;AWS-Foundational-Security-Best-Practices: ec2
+
+&#x2022;HIPAA: 164_308_a_1_ii_b, 164_312_e_1
+
+&#x2022;CIS-2.0: 5.1
+
+&#x2022;GxP-21-CFR-Part-11: 11.10-d, 11.10-g, 11.10-k
+
+&#x2022;AWS-Well-Architected-Framework-Security-Pillar: SEC05-BP03
+
+&#x2022;NIST-800-171-Revision-2: 3_1_1, 3_1_2, 3_1_3, 3_1_14, 3_1_20, 3_4_1, 3_4_7, 3_13_1, 3_13_2, 3_13_5, 3_13_6
+
+&#x2022;NIST-800-53-Revision-4: ac_4, cm_2, sc_7_3, sc_7
+
+&#x2022;NIST-800-53-Revision-5: ac_4_21, ac_17_b, ac_17_1, ac_17_4_a, ac_17_9, ac_17_10, cm_2_a, cm_2_2, cm_6_a, cm_7_b, cm_8_6, cm_9_b, sc_7_5, sc_7_7, sc_7_11, sc_7_12, sc_7_16, sc_7_21, sc_7_24_b, sc_7_25, sc_7_26, sc_7_27, sc_7_28, sc_7_a, sc_7_c
+
+&#x2022;NIST-CSF-1.1: ae_1, ac_3, ac_5, pt_4
+
+&#x2022;RBI-Cyber-Security-Framework: annex_i_1_3, annex_i_5_1
+
+&#x2022;FFIEC: d3-pc-am-b-10, d3-pc-im-b-1, d3-pc-im-b-2, d3-pc-im-b-6, d4-c-co-b-2
+
+&#x2022;FedRamp-Moderate-Revision-4: ac-4, ac-17-1, ac-21-b, cm-2, sc-4, sc-7-3, sc-7
+
+&#x2022;FedRAMP-Low-Revision-4: ac-17, cm-2, sc-7
+</p></td>
+                </tr>
+                
+                <tr class="p-3 mb-2 bg-success-custom">
+                    <td>PASS</td>
                     <td>medium</td>
                     <td>ec2</td>
                     <td>ap-southeast-1</td>
                     <td>ec2<wbr>_networkacl<wbr>_allow<wbr>_ingress<wbr>_tcp<wbr>_port<wbr>_22</td>
                     <td>Ensure no Network ACLs allow ingress from 0.0.0.0/0 to SSH port 22</td>
-                    <td>acl-0607a8ae41e75fc27</td>
-                    <td></td>
-                    <td>Network ACL acl-0607a8ae41e75fc27 has SSH port 22 open to the Internet.</td>
+                    <td>acl-0202546dbdd11cb3b</td>
+                    <td>
+&#x2022;Environment=Development
+
+&#x2022;Project=Network Hardened
+
+&#x2022;Name=Web NACL
+</td>
+                    <td>Network ACL Web NACL does not have SSH port 22 open to the Internet.</td>
                     <td><p class="show-read-more">Even having a perimeter firewall, having network acls open allows any user or malware with vpc access to scan for well known and sensitive ports and gain access to instance.</p></td>
                     <td><p class="show-read-more">Apply Zero Trust approach. Implement a process to scan and remediate unrestricted or overly permissive network acls. Recommended best practices is to narrow the definition for the minimum ports required.</p> <a class="read-more" href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html"><i class="fas fa-external-link-alt"></i></a></td>
                     <td><p class="show-read-more">
@@ -664,16 +731,84 @@
 </p></td>
                 </tr>
                 
-                <tr class="table-danger">
-                    <td>FAIL</td>
+                <tr class="p-3 mb-2 bg-success-custom">
+                    <td>PASS</td>
+                    <td>medium</td>
+                    <td>ec2</td>
+                    <td>ap-southeast-1</td>
+                    <td>ec2<wbr>_networkacl<wbr>_allow<wbr>_ingress<wbr>_tcp<wbr>_port<wbr>_22</td>
+                    <td>Ensure no Network ACLs allow ingress from 0.0.0.0/0 to SSH port 22</td>
+                    <td>acl-0607a8ae41e75fc27</td>
+                    <td>
+&#x2022;Environment=Development
+
+&#x2022;Name=Default NACL (DO NOT USE, deny all traffic)
+
+&#x2022;Project=Network Hardened
+</td>
+                    <td>Network ACL Default NACL (DO NOT USE, deny all traffic) does not have SSH port 22 open to the Internet.</td>
+                    <td><p class="show-read-more">Even having a perimeter firewall, having network acls open allows any user or malware with vpc access to scan for well known and sensitive ports and gain access to instance.</p></td>
+                    <td><p class="show-read-more">Apply Zero Trust approach. Implement a process to scan and remediate unrestricted or overly permissive network acls. Recommended best practices is to narrow the definition for the minimum ports required.</p> <a class="read-more" href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html"><i class="fas fa-external-link-alt"></i></a></td>
+                    <td><p class="show-read-more">
+&#x2022;CIS-1.4: 5.1
+
+&#x2022;CIS-1.5: 5.1
+
+&#x2022;MITRE-ATTACK: T1199, T1048, T1499, T1498, T1046
+
+&#x2022;CIS-2.0: 5.1
+
+&#x2022;AWS-Well-Architected-Framework-Security-Pillar: SEC05-BP02, SEC05-BP03
+</p></td>
+                </tr>
+                
+                <tr class="p-3 mb-2 bg-success-custom">
+                    <td>PASS</td>
+                    <td>medium</td>
+                    <td>ec2</td>
+                    <td>ap-southeast-1</td>
+                    <td>ec2<wbr>_networkacl<wbr>_allow<wbr>_ingress<wbr>_tcp<wbr>_port<wbr>_3389</td>
+                    <td>Ensure no Network ACLs allow ingress from 0.0.0.0/0 to Microsoft RDP port 3389</td>
+                    <td>acl-0202546dbdd11cb3b</td>
+                    <td>
+&#x2022;Environment=Development
+
+&#x2022;Project=Network Hardened
+
+&#x2022;Name=Web NACL
+</td>
+                    <td>Network ACL Web NACL does not have Microsoft RDP port 3389 open to the Internet.</td>
+                    <td><p class="show-read-more">Even having a perimeter firewall, having network acls open allows any user or malware with vpc access to scan for well known and sensitive ports and gain access to instance.</p></td>
+                    <td><p class="show-read-more">Apply Zero Trust approach. Implement a process to scan and remediate unrestricted or overly permissive network acls. Recommended best practices is to narrow the definition for the minimum ports required.</p> <a class="read-more" href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html"><i class="fas fa-external-link-alt"></i></a></td>
+                    <td><p class="show-read-more">
+&#x2022;CIS-1.4: 5.1
+
+&#x2022;CIS-1.5: 5.1
+
+&#x2022;MITRE-ATTACK: T1199, T1048, T1499, T1498, T1046
+
+&#x2022;CIS-2.0: 5.1
+
+&#x2022;AWS-Well-Architected-Framework-Security-Pillar: SEC05-BP03
+</p></td>
+                </tr>
+                
+                <tr class="p-3 mb-2 bg-success-custom">
+                    <td>PASS</td>
                     <td>medium</td>
                     <td>ec2</td>
                     <td>ap-southeast-1</td>
                     <td>ec2<wbr>_networkacl<wbr>_allow<wbr>_ingress<wbr>_tcp<wbr>_port<wbr>_3389</td>
                     <td>Ensure no Network ACLs allow ingress from 0.0.0.0/0 to Microsoft RDP port 3389</td>
                     <td>acl-0607a8ae41e75fc27</td>
-                    <td></td>
-                    <td>Network ACL acl-0607a8ae41e75fc27 has Microsoft RDP port 3389 open to the Internet.</td>
+                    <td>
+&#x2022;Environment=Development
+
+&#x2022;Name=Default NACL (DO NOT USE, deny all traffic)
+
+&#x2022;Project=Network Hardened
+</td>
+                    <td>Network ACL Default NACL (DO NOT USE, deny all traffic) does not have Microsoft RDP port 3389 open to the Internet.</td>
                     <td><p class="show-read-more">Even having a perimeter firewall, having network acls open allows any user or malware with vpc access to scan for well known and sensitive ports and gain access to instance.</p></td>
                     <td><p class="show-read-more">Apply Zero Trust approach. Implement a process to scan and remediate unrestricted or overly permissive network acls. Recommended best practices is to narrow the definition for the minimum ports required.</p> <a class="read-more" href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html"><i class="fas fa-external-link-alt"></i></a></td>
                     <td><p class="show-read-more">
