@@ -29,7 +29,7 @@ resource "aws_security_group_rule" "http_ingress" {
 }
 
 # Security Group rule - allow all outbound traffic
-resource "aws_security_group_rule" "all_egress" {
+resource "aws_security_group_rule" "all_egress_from_alb" {
   security_group_id = aws_security_group.alb_sg.id
   type = "egress"
   cidr_blocks = ["0.0.0.0/0"]
@@ -50,14 +50,14 @@ resource "aws_security_group" "ec2_sg" {
 resource "aws_security_group_rule" "http_ingress_from_alb" {
   security_group_id = aws_security_group.ec2_sg.id
   type = "ingress"
-  source_security_group_id = [aws_security_group.alb_sg.id]
+  source_security_group_id = aws_security_group.alb_sg.id
   from_port = 80
   to_port = 80
   protocol = "tcp"
 }
 
 # Security group rule - allow all outbound traffic
-resource "aws_security_group_rule" "all_egress" {
+resource "aws_security_group_rule" "all_egress_from_ec2" {
   security_group_id = aws_security_group.ec2_sg.id
   type = "egress"
   cidr_blocks = ["0.0.0.0/0"]
