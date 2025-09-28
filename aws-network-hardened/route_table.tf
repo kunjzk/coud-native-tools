@@ -14,8 +14,14 @@ resource "aws_route" "public_main" {
   gateway_id = aws_internet_gateway.main.id
 }
 
-# Route Table Association
+# Route Table Association to first subnet
 resource "aws_route_table_association" "public_main" {
   subnet_id = aws_subnet.public_main.id
+  route_table_id = aws_route_table.public_main.id
+}
+
+# Route Table Association to second subnet
+resource "aws_route_table_association" "public_second" {
+  subnet_id = aws_subnet.public_second.id
   route_table_id = aws_route_table.public_main.id
 }

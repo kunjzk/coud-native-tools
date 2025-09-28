@@ -108,8 +108,15 @@ resource "aws_network_acl_rule" "out_ephemeral" {
   to_port        = 65535
 }
 
-## Associate NACL to the subnet (replaces default)
+## Associate NACL to the main subnet (replaces default)
 resource "aws_network_acl_association" "web_nacl_assoc" {
   subnet_id      = aws_subnet.public_main.id
   network_acl_id = aws_network_acl.web_nacl.id
 }
+
+## Associate NACL to the second subnet (replaces default)
+resource "aws_network_acl_association" "web_nacl_assoc_second" {
+  subnet_id      = aws_subnet.public_second.id
+  network_acl_id = aws_network_acl.web_nacl.id
+}
+

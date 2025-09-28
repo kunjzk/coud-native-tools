@@ -37,14 +37,13 @@ resource "aws_internet_gateway" "main" {
   })
 }
 
-# Output the Elastic IP for SSH access
-output "elastic_ip" {
-  description = "Elastic IP of EC2 instance"
-  value       = aws_eip.main.public_ip
-}
-
 # Output instance ID for SSM access
 output "instance_id" {
   description = "Instance ID of EC2 instance"
   value       = aws_instance.main.id
+}
+
+output "alb_dns_name" {
+  description = "ALB DNS name"
+  value       = aws_lb.app_alb.dns_name
 }
