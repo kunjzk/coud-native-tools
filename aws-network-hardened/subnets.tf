@@ -18,3 +18,13 @@ resource "aws_subnet" "public_second" {
     Name = "Subnet Public Second"
   })
 }
+
+# Private subnet
+resource "aws_subnet" "private" {
+  vpc_id = aws_vpc.main.id
+  cidr_block = "10.0.3.0/24"
+  availability_zone = "ap-southeast-1c"
+  tags = merge(local.tags, {
+    Name = "Private Subnet"
+  })
+}

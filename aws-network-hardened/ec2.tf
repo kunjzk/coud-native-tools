@@ -33,7 +33,7 @@ resource "aws_iam_instance_profile" "ec2_ssm_profile" {
 resource "aws_instance" "main" {
   ami           = "ami-05fd46f12b86c4a6c"  # Amazon Linux 2023 for ap-southeast-1
   instance_type = "t3.micro"
-  subnet_id = aws_subnet.public_main.id
+  subnet_id = aws_subnet.private.id
   vpc_security_group_ids = [aws_security_group.ec2_sg.id]
   iam_instance_profile = aws_iam_instance_profile.ec2_ssm_profile.name
   tags = merge(local.tags, {
