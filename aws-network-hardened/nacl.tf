@@ -191,7 +191,7 @@ resource "aws_network_acl_rule" "out_internet_https_private" {
 # Allow outbound traffic to the internet
 resource "aws_network_acl_rule" "out_internet_http_private" {
   network_acl_id = aws_network_acl.private_nacl.id
-  rule_number    = 200
+  rule_number    = 205
   egress         = true
   protocol       = "tcp"
   rule_action    = "allow"

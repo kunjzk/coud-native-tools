@@ -36,6 +36,12 @@ resource "aws_instance" "main" {
   subnet_id = aws_subnet.private.id
   vpc_security_group_ids = [aws_security_group.ec2_sg.id]
   iam_instance_profile = aws_iam_instance_profile.ec2_ssm_profile.name
+  user_data = <<EOF
+#!/usr/bin/bash
+set -euxo pipefail
+dnf install -y amazon-ssm-agent || yum install -y amazon-ssm-agent || true
+systemctl enable --now amazon-ssm-agent || true
+EOF
   tags = merge(local.tags, {
     Name = "Tiny EC2 Instance Main"
   })
