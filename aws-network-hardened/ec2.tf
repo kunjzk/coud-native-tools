@@ -39,8 +39,14 @@ resource "aws_instance" "main" {
   user_data = <<EOF
 #!/usr/bin/bash
 set -euxo pipefail
+# Install/enable SSM Agent
 dnf install -y amazon-ssm-agent || yum install -y amazon-ssm-agent || true
 systemctl enable --now amazon-ssm-agent || true
+
+# Install/enable NGINX and set a simple index page
+dnf install -y nginx || yum install -y nginx
+systemctl enable --now nginx
+echo "OK - $(hostname) - $(date -Iseconds)" > /usr/share/nginx/html/index.html
 EOF
   tags = merge(local.tags, {
     Name = "Tiny EC2 Instance Main"
