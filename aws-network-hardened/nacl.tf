@@ -141,7 +141,31 @@ resource "aws_network_acl_rule" "in_alb_private" {
   to_port        = 80
 }
 
-# Allow inbound traffic from ALB on ephemeral ports
+# Deny inbound SSH (must be before ephemeral rule)
+resource "aws_network_acl_rule" "in_deny_ssh_private" {
+  network_acl_id = aws_network_acl.private_nacl.id
+  rule_number    = 105
+  egress         = false
+  protocol       = "tcp"
+  rule_action    = "deny"
+  cidr_block     = "0.0.0.0/0"
+  from_port      = 22
+  to_port        = 22
+}
+
+# Deny inbound RDP (must be before ephemeral rule)
+resource "aws_network_acl_rule" "in_deny_rdp_private" {
+  network_acl_id = aws_network_acl.private_nacl.id
+  rule_number    = 106
+  egress         = false
+  protocol       = "tcp"
+  rule_action    = "deny"
+  cidr_block     = "0.0.0.0/0"
+  from_port      = 3389
+  to_port        = 3389
+}
+
+# Allow inbound ephemeral ports (return traffic from outbound connections)
 resource "aws_network_acl_rule" "in_ephemeral_private" {
   network_acl_id = aws_network_acl.private_nacl.id
   rule_number    = 110
@@ -151,29 +175,6 @@ resource "aws_network_acl_rule" "in_ephemeral_private" {
   cidr_block     = "0.0.0.0/0"
   from_port      = 1024
   to_port        = 65535
-}
-
-# Deny inbound traffic on port 22 and 3389
-resource "aws_network_acl_rule" "in_deny_ssh_private" {
-  network_acl_id = aws_network_acl.private_nacl.id
-  rule_number    = 120
-  egress         = false
-  protocol       = "tcp"
-  rule_action    = "deny"
-  cidr_block     = "0.0.0.0/0"
-  from_port      = 22
-  to_port        = 22
-}
-
-resource "aws_network_acl_rule" "in_deny_rdp_private" {
-  network_acl_id = aws_network_acl.private_nacl.id
-  rule_number    = 130
-  egress         = false
-  protocol       = "tcp"
-  rule_action    = "deny"
-  cidr_block     = "0.0.0.0/0"
-  from_port      = 3389
-  to_port        = 3389
 }
 ## EGRESS rules (out of private subnet)
 # Allow outbound traffic to the internet
