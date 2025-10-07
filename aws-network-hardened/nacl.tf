@@ -176,7 +176,7 @@ resource "aws_network_acl_rule" "in_ephemeral_private" {
   from_port      = 1024
   to_port        = 65535
 }
-## EGRESS rules (out of private subnet)
+## EGRESS rules (out of private subnet) 
 # Allow outbound traffic to the internet
 resource "aws_network_acl_rule" "out_internet_https_private" {
   network_acl_id = aws_network_acl.private_nacl.id
