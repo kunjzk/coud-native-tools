@@ -77,3 +77,5 @@ Docker upon installation creates a Unix group called `docker`. Members can acces
 Members can be added using `sudo usermod -aG docker $USER` --> usually add the user who installed docker, devs who need container access, CI users.
 
 # A level deeper - why can Podman avoid a daemon?
+
+# Q: so with docker, who manages the containers? daemon/root? what does "manage" mean? root is the user runing the container process? why is that bad?
