@@ -16,6 +16,23 @@ locals {
 # 8. Elastic IP for EC2 Instance
 # 9. Tiny EC2 Instance
 
+# Resolve the latest official Ubuntu 22.04 LTS AMI published by Canonical.
+# Podman is installed on first boot via user_data below.
+data "aws_ami" "ubuntu" {
+  most_recent = true
+  owners      = ["099720109477"] # Canonical
+
+  filter {
+    name   = "name"
+    values = ["ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*"]
+  }
+
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
+  }
+}
+
 provider "aws" {
   region = "ap-southeast-1"
 }
@@ -116,12 +133,20 @@ resource "aws_eip" "main" {
 
 # Tiny EC2 Instance
 resource "aws_instance" "main" {
-  ami                         = "ami-05fd46f12b86c4a6c" # Amazon Linux 2023 for ap-southeast-1
+  ami                         = data.aws_ami.ubuntu.id
   instance_type               = "t3.micro"
   subnet_id                   = aws_subnet.public_main.id
   associate_public_ip_address = true
   vpc_security_group_ids      = [aws_security_group.main.id]
   key_name                    = "For SSH" # Key pair name from EC2 console
+
+  user_data = <<-EOF
+    #!/bin/bash
+    apt-get update -y
+    apt-get install -y podman
+    systemctl enable --now podman.socket
+  EOF
+
   tags = merge(local.tags, {
     Name = "Tiny EC2 Instance Main"
   })
@@ -141,5 +166,5 @@ output "elastic_ip" {
 
 output "ssh_command" {
   description = "Command to SSH into the EC2 instance"
-  value       = "ssh -i ~/.ssh/aws-priv-key.pem ec2-user@${aws_eip.main.public_ip}"
+  value       = "ssh -i ~/.ssh/aws-priv-key.pem ubuntu@${aws_eip.main.public_ip}"
 }
