@@ -3,7 +3,11 @@
 set -e
 
 echo "Connecting to EC2 and running remote commands..."
-ssh -i ~/.ssh/aws-priv-key.pem ubuntu@52.220.81.106 << 'EOF'
+ssh -i ~/.ssh/aws-priv-key.pem ubuntu@13.213.138.120 << 'EOF'
+  echo "Waiting for apt lock to be released..."
+  while sudo lsof /var/lib/dpkg/lock-frontend &>/dev/null; do sleep 2; done
+  sudo systemctl stop unattended-upgrades 2>/dev/null || true
+
   echo "Updating apt..."
   sudo apt-get update -y
 
@@ -22,22 +26,35 @@ ssh -i ~/.ssh/aws-priv-key.pem ubuntu@52.220.81.106 << 'EOF'
   fi
   which podman
 
+  docker pull docker.io/library/nginx:latest
+  podman pull docker.io/library/nginx:latest
+
+  echo ""
+  echo ""
+  echo "--------------------------------"
+
   echo "Running nginx container with docker..."
   sudo docker rm -f nginx 2>/dev/null || true
-  sudo docker run -d --name nginx docker.io/library/nginx:latest
+  sudo docker run -d --name nginx docker.io/library/nginx:latest &>/dev/null
   sleep 5
 
-  echo "Checking who owns the nginx container (docker)..."
+  echo "Checking ownership of nginx process"
   ps aux | grep nginx
-  sudo docker stop nginx
+  sudo docker stop nginx &>/dev/null
   sleep 5
+  echo ""
+  echo ""
+  echo "--------------------------------"
 
   echo "Running nginx container with podman..."
   podman rm -f nginx 2>/dev/null || true
-  podman run -d --name nginx docker.io/library/nginx:latest
+  podman run -d --name nginx docker.io/library/nginx:latest &>/dev/null
   sleep 5
 
-  echo "Checking who owns the nginx container (podman)..."
+  echo "Checking ownership of nginx process"
   ps aux | grep nginx
-  podman stop nginx
+  podman stop nginx &>/dev/null
+  echo ""
+  echo ""
+  echo "--------------------------------"
 EOF
