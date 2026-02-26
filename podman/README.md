@@ -17,7 +17,7 @@ Docker
 
 Podman
 
-- rootless containers by default
+- rootless containers by default (proved by trial on Ubuntu host)
 - no root daemon/socket, each user manages their own containers
 
 ### 2. Ships with Linux distros
