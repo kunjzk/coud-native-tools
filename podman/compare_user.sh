@@ -53,6 +53,9 @@ ssh -i ~/.ssh/aws-priv-key.pem ubuntu@13.213.138.120 << 'EOF'
 
   echo "Checking ownership of nginx process"
   ps aux | grep nginx
+  podman inspect --format '{{.State.Pid}}' nginx
+  cat /proc/$(podman inspect --format '{{.State.Pid}}' nginx)/uid_map
+  ps -o uid,user,pid,cmd | grep $(podman inspect --format '{{.State.Pid}}' nginx)
   podman stop nginx &>/dev/null
   echo ""
   echo ""
