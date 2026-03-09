@@ -12,14 +12,20 @@ variable "tags" {
     }
 }
 
-variable "ami" {
-    type = string
-    description = "AMI to use for the EC2 instance"
-    default = "ami-05fd46f12b86c4a6c"
+variable "ec2_instance" {
+    type = object({
+        ami = string
+        instance_type = string
+    })
+    description = "EC2 instance configuration"
+    default = {
+        ami = "ami-05fd46f12b86c4a6c"
+        instance_type = "t3.micro"
+    }
 }
 
-variable "instance_type" {
+variable "db_password" {
     type = string
-    description = "Instance type to use for the EC2 instance"
-    default = "t3.micro"
+    description = "Password for the database"
+    sensitive = true
 }

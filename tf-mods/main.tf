@@ -24,10 +24,10 @@ module "security_group" {
 module "ec2" {
     source  = "terraform-aws-modules/ec2-instance/aws"
     version = "6.3.0"
-    ami           = var.ami
+    ami           = var.ec2_instance.ami
     name = "demo_instance"
     create_eip = true
-    instance_type = var.instance_type
+    instance_type = var.ec2_instance.instance_type
     key_name      = "For SSH"
     monitoring    = true
     subnet_id     = module.network.subnet_id
@@ -35,4 +35,8 @@ module "ec2" {
     tags = merge(local.tags, {
         Module = "EC2"
     })
+    user_data = <<EOF
+#!/bin/bash
+echo "DB_PASSWORD=${var.db_password}" >> /etc/app.env
+EOF
 }
