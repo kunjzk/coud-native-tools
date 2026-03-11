@@ -4,6 +4,14 @@ locals {
     })
 }
 
+data "aws_secretsmanager_secret" "db_password" {
+    name = "prod/ec2/dbpassword"
+}
+
+data "aws_secretsmanager_secret_version" "db_password" {
+    secret_id = data.aws_secretsmanager_secret.db_password.id
+}
+
 provider "aws" {
   region = var.region
 }
@@ -37,6 +45,6 @@ module "ec2" {
     })
     user_data = <<EOF
 #!/bin/bash
-echo "DB_PASSWORD=${var.db_password}" >> /etc/app.env
+echo "DB_PASSWORD=${data.aws_secretsmanager_secret_version.db_password.secret_string}" >> /etc/app.env
 EOF
 }

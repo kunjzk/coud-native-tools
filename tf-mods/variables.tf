@@ -24,9 +24,9 @@ variable "ec2_instance" {
     }
 }
 
-variable "db_password" {
-    type = string
-    description = "Password for the database"
-    sensitive = true
-    default = "password123"
-}
+# variable "db_password" {
+#     type = string
+#     description = "Password for the database"
+#     sensitive = true
+#     default = "password123"
+# }
