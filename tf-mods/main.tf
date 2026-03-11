@@ -8,10 +8,6 @@ data "aws_secretsmanager_secret" "db_password" {
     name = "prod/ec2/dbpassword"
 }
 
-data "aws_secretsmanager_secret_version" "db_password" {
-    secret_id = data.aws_secretsmanager_secret.db_password.id
-}
-
 provider "aws" {
   region = var.region
 }
@@ -29,6 +25,38 @@ module "security_group" {
 
 }
 
+resource "aws_iam_role" "ec2_secrets_role" {
+    name = "ec2-secrets-manager-role"
+    assume_role_policy = jsonencode({
+        Version = "2012-10-17"
+        Statement = [{
+            Effect    = "Allow"
+            Principal = { Service = "ec2.amazonaws.com" }
+            Action    = "sts:AssumeRole"
+        }]
+    })
+    tags = local.tags
+}
+
+resource "aws_iam_role_policy" "ec2_read_db_secret" {
+    name = "ec2-read-db-secret"
+    role = aws_iam_role.ec2_secrets_role.id
+    policy = jsonencode({
+        Version = "2012-10-17"
+        Statement = [{
+            Effect   = "Allow"
+            Action   = "secretsmanager:GetSecretValue"
+            Resource = data.aws_secretsmanager_secret.db_password.arn
+        }]
+    })
+}
+
+resource "aws_iam_instance_profile" "ec2_secrets_profile" {
+    name = "ec2-secrets-manager-profile"
+    role = aws_iam_role.ec2_secrets_role.name
+    tags = local.tags
+}
+
 module "ec2" {
     source  = "terraform-aws-modules/ec2-instance/aws"
     version = "6.3.0"
@@ -40,11 +68,13 @@ module "ec2" {
     monitoring    = true
     subnet_id     = module.network.subnet_id
     vpc_security_group_ids = [module.security_group.security_group_id]
+    iam_instance_profile   = aws_iam_instance_profile.ec2_secrets_profile.name
     tags = merge(local.tags, {
         Module = "EC2"
     })
     user_data = <<EOF
 #!/bin/bash
-echo "DB_PASSWORD=${data.aws_secretsmanager_secret_version.db_password.secret_string}" >> /etc/app.env
+SECRET_ARN=${data.aws_secretsmanager_secret.db_password.arn}
+echo "DB_PASSWORD=$(aws secretsmanager get-secret-value --secret-id $SECRET_ARN --query SecretString --output text)" >> /etc/app.env
 EOF
 }
