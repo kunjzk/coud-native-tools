@@ -72,9 +72,7 @@ module "ec2" {
     tags = merge(local.tags, {
         Module = "EC2"
     })
-    user_data = <<EOF
-#!/bin/bash
-SECRET_ARN=${data.aws_secretsmanager_secret.db_password.arn}
-echo "DB_PASSWORD=$(aws secretsmanager get-secret-value --secret-id $SECRET_ARN --query SecretString --output text)" >> /etc/app.env
-EOF
+    user_data = templatefile("${path.module}/userdata.sh.tftpl", {
+        secret_arn = data.aws_secretsmanager_secret.db_password.arn
+    })
 }

@@ -1,0 +1,2 @@
+#!/bin/bash
+echo "DB_PASSWORD=$(aws secretsmanager get-secret-value --secret-id ${secret_arn} --query SecretString --output text)" >> /etc/app.env
