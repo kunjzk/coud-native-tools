@@ -55,13 +55,18 @@ resource "aws_iam_instance_profile" "ec2_secrets_profile" {
     name = "ec2-secrets-manager-profile"
     role = aws_iam_role.ec2_secrets_role.name
     tags = local.tags
+    lifecycle {
+        create_before_destroy = true
+    }
 }
 
 module "ec2" {
+    # count = 3
+    for_each = toset(["web_instance", "db_instance", "app_instance"])
     source  = "terraform-aws-modules/ec2-instance/aws"
     version = "6.3.0"
     ami           = var.ec2_instance.ami
-    name = "demo_instance"
+    name = each.value
     create_eip = true
     instance_type = var.ec2_instance.instance_type
     key_name      = "For SSH"
